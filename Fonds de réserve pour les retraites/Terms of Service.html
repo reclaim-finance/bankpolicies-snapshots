@@ -110,7 +110,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=global-styles-inline-css */
 </style>
 
-<link rel='stylesheet' id='tailpress-app-css' href='https://www.fondsdereserve.fr/wp-content/themes/frr/dist/assets/app-DldRfPz4.css?ver=0.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tailpress-app-css' href='https://www.fondsdereserve.fr/wp-content/themes/frr/dist/assets/app-C4FjkYEX.css?ver=0.1.0' type='text/css' media='all' />
 <script type="text/javascript" src="https://www.fondsdereserve.fr/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
 <script type="text/javascript" src="https://www.fondsdereserve.fr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 <link rel="https://api.w.org/" href="https://www.fondsdereserve.fr/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.fondsdereserve.fr/wp-json/wp/v2/pages/46" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.fondsdereserve.fr/xmlrpc.php?rsd" />
@@ -366,7 +366,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                                                 <a href="https://www.fondsdereserve.fr/publications/" class="flex items-center gap-1 font-bold text-base px-2 py-2 hover:opacity-60 transition !no-underline">
                             Publications                        </a>
 
-                        <button id="search-toggle" type="button" class="items-center gap-1 font-bold text-base px-2 py-2 hover:opacity-60 transition hidden xl:flex">
+                        <button id="search-toggle" type="button" class="items-center gap-1 font-bold text-base px-2 py-2 hover:opacity-60 transition hidden xl:flex focus:ring-2 focus:ring-ios-blue focus:ring-offset-2 rounded" aria-label="Rechercher" aria-expanded="false">
                             <span class="w-6 h-auto aspect-square object-contain text-white">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="https://www.w3.org/2000/svg">
 <path d="M21.0002 21L16.7002 16.7M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -406,26 +406,26 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                     <!-- Boutons mobile (recherche + burger) -->
                     <div class="flex lg:hidden items-center gap-4">
-                        <button id="search-toggle-mobile" type="button" class="flex items-center justify-center p-2 focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button id="search-toggle-mobile" type="button" class="flex items-center justify-center min-w-[44px] min-h-[44px] p-2 focus:ring-2 focus:ring-ios-blue focus:ring-offset-2 rounded" aria-label="Rechercher" aria-expanded="false">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </button>
 
-                        <button id="mobile-toggle" class="flex items-center justify-center focus:outline-none">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <button id="mobile-toggle" class="flex items-center justify-center min-w-[44px] min-h-[44px] focus:ring-2 focus:ring-ios-blue focus:ring-offset-2 rounded" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                             </svg>
                         </button>
                     </div>
 
-                    <div id="switch-desktop" class="hidden lg:inline cursor-pointer w-[26px] h-[42px] absolute right-10 top-1/2 -translate-y-1/2 print:hidden">
+                    <button id="switch-desktop" type="button" aria-label="Basculer le mode sombre" aria-pressed="false" class="hidden lg:inline cursor-pointer w-[26px] h-[42px] absolute right-10 top-1/2 -translate-y-1/2 print:hidden focus:ring-2 focus:ring-ios-blue focus:ring-offset-2 rounded-full">
                         <svg width="26" height="42" viewBox="0 0 26 42" fill="none" xmlns="https://www.w3.org/2000/svg">
                             <rect x="1" y="1" width="24" height="40" rx="12" fill="#1F2547" />
                             <rect x="0.5" y="0.5" width="25" height="41" rx="12.5" stroke="white" stroke-opacity="0.16" />
                             <rect id="toggle-knob-desktop" x="5" y="5" width="16" height="16" rx="8" fill="white" class="transition-all duration-300" />
                         </svg>
-                    </div>
+                    </button>
                 </div>
 
                 <!-- Search panel desktop intégré dans le header -->
@@ -487,151 +487,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 </div>
                 </div>
 
-                <!-- Menu mobile -->
-                <div id="mobile-menu" class="fixed text-deep-navy top-0 right-0 h-full  min-h-screen w-screen bg-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden">
-                    <div class="h-full bg-deep-navy/5 overflow-y-auto max-h-screen">
-                        <div class="p-6 flex items-center justify-between border-b border-gray-200">
-                            <img class="w-20 h-auto aspect-square bg-dark-red p-4" src="/wp-content/themes/frr/resources/img/general/logo-frr.svg" alt="Logo FRR" />
-
-                            <button id="close-mobile-menu" class="text-deep-navy text-3xl leading-none">&times;</button>
-                        </div>
-
-                        <div class="p-6 space-y-0 font-inter">
-                                                                                            <div>
-                                    <button class="toggle-mobile-submenu w-full flex justify-between items-center text-base font-semibold py-4 border-b border-deep-navy/20 ">
-                                        Qui sommes-nous
-                                        <img
-                                            class="w-4 h-4 transform transition-transform"
-                                            src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/chevron-down.svg"
-                                            alt="Chevron" />
-                                    </button>
-
-                                                                            <ul class="mobile-submenu hidden pl-4 text-sm text-deep-navy">
-                                                                                            <li>
-                                                    <a href="https://www.fondsdereserve.fr/a-propos/les-missions-du-frr/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Les missions du FRR</a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="https://www.fondsdereserve.fr/a-propos/organisation-et-gouvernance/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Organisation &amp; Gouvernance</a>
-                                                </li>
-                                                                                    </ul>
-                                                                    </div>
-                                                                                            <div>
-                                    <button class="toggle-mobile-submenu w-full flex justify-between items-center text-base font-semibold py-4 border-b border-deep-navy/20 ">
-                                        Stratégie
-                                        <img
-                                            class="w-4 h-4 transform transition-transform"
-                                            src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/chevron-down.svg"
-                                            alt="Chevron" />
-                                    </button>
-
-                                                                            <ul class="mobile-submenu hidden pl-4 text-sm text-deep-navy">
-                                                                                            <li>
-                                                    <a href="https://www.fondsdereserve.fr/strategie-dinvestissement/allocation-dactifs/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Allocation d’actifs</a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="https://www.fondsdereserve.fr/strategie-dinvestissement/mise-en-oeuvre-de-lallocation/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Mise en œuvre de l’allocation d&#039;actifs</a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="https://www.fondsdereserve.fr/strategie-dinvestissement/gestion-et-maitrise-des-risques/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Gestion et maîtrise des risques</a>
-                                                </li>
-                                                                                    </ul>
-                                                                    </div>
-                                                                                            <div>
-                                    <button class="toggle-mobile-submenu w-full flex justify-between items-center text-base font-semibold py-4 border-b border-deep-navy/20 text-ios-blue">
-                                        Investissement Responsable
-                                        <img
-                                            class="w-4 h-4 transform transition-transform"
-                                            src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/chevron-down.svg"
-                                            alt="Chevron" />
-                                    </button>
-
-                                                                            <ul class="mobile-submenu hidden pl-4 text-sm text-deep-navy">
-                                                                                            <li>
-                                                    <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/strategie-investisseur-responsable/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Stratégie d&#039;investisseur responsable</a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/initiatives-soutenues-par-le-frr/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Initiatives soutenues par le FRR</a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/politique-climatique-du-frr/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Politique Climatique du FRR</a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/exclusions-ethiques/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Exclusions Ethiques</a>
-                                                </li>
-                                                                                            <li>
-                                                    <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/exercice-des-droits-de-vote-et-politique-dengagement/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Exercice des droits de vote et politique d&#039;engagement</a>
-                                                </li>
-                                                                                    </ul>
-                                                                    </div>
-                            
-                            <div>
-                                <a href="https://www.fondsdereserve.fr/publications/" class="!no-underline block text-base font-semibold py-3 border-b border-deep-navy/20 ">
-                                    Publications                                </a>
-                            </div>
-
-                            <div class="rounded-xl bg-white shadow/5 overflow-hidden mt-6">
-                                <div class="flex items-center justify-between px-4 py-3">
-                                    <span class="font-inter text-base font-normal leading-6">Apparence</span>
-                                    <label id="switch-mobile" class="inline-flex items-center space-x-2">
-                                        <span class="font-inter text-sm font-normal leading-5">Claire</span>
-                                        <button
-                                            aria-pressed="true"
-                                            class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ios-blue"
-                                            style="background-color: #1F2547;">
-                                            <span
-                                                id="toggle-knob-mobile"
-                                                class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform duration-200"></span>
-                                        </button>
-                                    </label>
-                                </div>
-                            </div>
-
-
-                                                        <div class="rounded-xl bg-white shadow/5 overflow-hidden mt-6">
-                                <div class="flex items-center justify-between px-4 py-3">
-                                    <span class="font-inter text-base font-normal leading-6">Langue</span>
-                                    <div class="flex items-center gap-2">
-                                                                                    <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/exclusions-ethiques/" class="px-3 py-1.5 text-sm font-semibold rounded-full !no-underline transition-all bg-deep-navy text-white">
-                                                FR                                            </a>
-                                                                                    <a href="https://www.fondsdereserve.fr/en/responsible-investment/ethical-exclusions/" class="px-3 py-1.5 text-sm font-semibold rounded-full !no-underline transition-all bg-deep-navy/10 text-deep-navy hover:bg-deep-navy/20">
-                                                EN                                            </a>
-                                                                            </div>
-                                </div>
-                            </div>
-                            
-                            <div class="rounded-xl bg-white shadow/5 overflow-hidden mt-6">
-                                <a href="https://www.fondsdereserve.fr/mentions-legales/" class="flex items-center justify-between p-4 !no-underline">
-                                    <span class="font-inter text-base font-normal leading-6">Mentions légales</span>
-                                    <img class="ml-auto inline w-5 h-5 min-w-5 min-h-5" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/chevron-right.svg" alt="Icône chevron droit" />
-                                </a>
-                            </div>
-
-                            <div class="bg-deep-navy/20 h-px mt-6"></div>
-
-                            <a href="https://www.linkedin.com/company/frr-fonds-de-r-serve-pour-les-retraites/?trk=company_logo" target="_blank" rel="nofollow noopener noreferrer" class="flex flex-row justify-between items-center gap-2.5 !no-underline">
-                                <span>Nous suivre :</span>
-                                <img class="w-10 h-10 p-2.5" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/rs-linkedin.svg" alt="Icône LinkedIn" />
-                            </a>
-
-                            <div class="bg-deep-navy/20 h-px"></div>
-
-                            <a href="https://www.fondsdereserve.fr/offres/" class="inline-flex items-center gap-2 bg-dusty-teal text-white text-sm font-semibold px-6 py-3.5 rounded-full !no-underline hover:opacity-90 transition-all w-fit">
-                                <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                                Le FRR recrute                            </a>
-
-                            <div class="flex flex-col md:flex-row justify-between opacity-50 text-xs gap-10 md:gap-4 items-center mt-10">
-                                <span>© 2026 Fonds de réserve pour les retraites</span>
-                                <span class="inline space-x-[0.0625rem]">
-                                    <span class="inline">Made with</span>
-                                    <img class="w-4 h-4 inline" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/heart.svg" alt="Icône Love" />
-                                    <span class="inline">by My Jungly</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
                                     <div class="absolute pointer-events-none h-full inset-0 bg-[url('/wp-content/themes/frr/resources/img/home/bg-header.png')] bg-repeat bg-[length:400px_400px] opacity-5 mix-blend-multiply print:hidden">
                     </div>
                 
@@ -662,6 +517,135 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     </div>
 
     </header>
+
+    <!-- Menu mobile : hors du header pour éviter les conflits de spécificité dark mode -->
+    <nav id="mobile-menu" aria-label="Menu principal mobile" class="fixed text-[#1F2547] top-0 right-0 h-full min-h-screen w-screen bg-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden">
+        <div class="h-full bg-[rgba(31,37,71,0.05)] overflow-y-auto max-h-screen">
+            <div class="p-6 flex items-center justify-between border-b border-[rgba(31,37,71,0.2)]">
+                <img class="w-20 h-auto aspect-square bg-dark-red p-4" src="/wp-content/themes/frr/resources/img/general/logo-frr.svg" alt="Logo FRR" />
+                <button id="close-mobile-menu" class="text-3xl leading-none min-w-[44px] min-h-[44px] flex items-center justify-center" style="color: #1F2547;" aria-label="Fermer le menu">&times;</button>
+            </div>
+
+            <div class="p-6 space-y-0 font-inter">
+                                                        <div>
+                        <button class="toggle-mobile-submenu w-full flex justify-between items-center text-base font-semibold py-4 border-b border-[rgba(31,37,71,0.2)] focus:outline-none focus:ring-2 focus:ring-ios-blue focus:ring-offset-2 rounded " aria-expanded="false">
+                            Qui sommes-nous                            <img class="w-4 h-4 transform transition-transform" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/chevron-down.svg" alt="Chevron" />
+                        </button>
+
+                                                    <ul class="mobile-submenu hidden pl-4 text-sm" style="color: #1F2547;">
+                                                                    <li>
+                                        <a href="https://www.fondsdereserve.fr/a-propos/les-missions-du-frr/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Les missions du FRR</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.fondsdereserve.fr/a-propos/organisation-et-gouvernance/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Organisation &amp; Gouvernance</a>
+                                    </li>
+                                                            </ul>
+                                            </div>
+                                                        <div>
+                        <button class="toggle-mobile-submenu w-full flex justify-between items-center text-base font-semibold py-4 border-b border-[rgba(31,37,71,0.2)] focus:outline-none focus:ring-2 focus:ring-ios-blue focus:ring-offset-2 rounded " aria-expanded="false">
+                            Stratégie                            <img class="w-4 h-4 transform transition-transform" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/chevron-down.svg" alt="Chevron" />
+                        </button>
+
+                                                    <ul class="mobile-submenu hidden pl-4 text-sm" style="color: #1F2547;">
+                                                                    <li>
+                                        <a href="https://www.fondsdereserve.fr/strategie-dinvestissement/allocation-dactifs/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Allocation d’actifs</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.fondsdereserve.fr/strategie-dinvestissement/mise-en-oeuvre-de-lallocation/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Mise en œuvre de l’allocation d&#039;actifs</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.fondsdereserve.fr/strategie-dinvestissement/gestion-et-maitrise-des-risques/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Gestion et maîtrise des risques</a>
+                                    </li>
+                                                            </ul>
+                                            </div>
+                                                        <div>
+                        <button class="toggle-mobile-submenu w-full flex justify-between items-center text-base font-semibold py-4 border-b border-[rgba(31,37,71,0.2)] focus:outline-none focus:ring-2 focus:ring-ios-blue focus:ring-offset-2 rounded text-ios-blue" aria-expanded="false">
+                            Investissement Responsable                            <img class="w-4 h-4 transform transition-transform" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/chevron-down.svg" alt="Chevron" />
+                        </button>
+
+                                                    <ul class="mobile-submenu hidden pl-4 text-sm" style="color: #1F2547;">
+                                                                    <li>
+                                        <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/strategie-investisseur-responsable/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Stratégie d&#039;investisseur responsable</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/initiatives-soutenues-par-le-frr/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Initiatives soutenues par le FRR</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/politique-climatique-du-frr/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Politique Climatique du FRR</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/exclusions-ethiques/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Exclusions Ethiques</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/exercice-des-droits-de-vote-et-politique-dengagement/" class="block py-4 font-inter leading-6 text-base font-normal !no-underline">Exercice des droits de vote et politique d&#039;engagement</a>
+                                    </li>
+                                                            </ul>
+                                            </div>
+                
+                <div>
+                    <a href="https://www.fondsdereserve.fr/publications/" class="!no-underline block text-base font-semibold py-3 border-b border-[rgba(31,37,71,0.2)] ">
+                        Publications                    </a>
+                </div>
+
+                <div class="rounded-xl shadow/5 overflow-hidden mt-6" style="background-color: #FFFFFF;">
+                    <div class="flex items-center justify-between px-4 py-3">
+                        <span class="font-inter text-base font-normal leading-6">Apparence</span>
+                        <label id="switch-mobile" class="inline-flex items-center space-x-2">
+                            <span id="label-mobile-theme" class="font-inter text-sm font-normal leading-5">Claire</span>
+                            <button
+                                aria-pressed="false"
+                                aria-label="Basculer le mode sombre"
+                                class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-ios-blue"
+                                style="background-color: #1F2547;">
+                                <span id="toggle-knob-mobile" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform duration-200"></span>
+                            </button>
+                        </label>
+                    </div>
+                </div>
+
+                                <div class="rounded-xl shadow/5 overflow-hidden mt-6" style="background-color: #FFFFFF;">
+                    <div class="flex items-center justify-between px-4 py-3">
+                        <span class="font-inter text-base font-normal leading-6">Langue</span>
+                        <div class="flex items-center gap-2">
+                                                            <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/exclusions-ethiques/" class="px-3 py-1.5 text-sm font-semibold rounded-full !no-underline transition-all" style="background-color: #1F2547; color: #FFFFFF;">
+                                    FR                                </a>
+                                                            <a href="https://www.fondsdereserve.fr/en/responsible-investment/ethical-exclusions/" class="px-3 py-1.5 text-sm font-semibold rounded-full !no-underline transition-all" style="background-color: rgba(31,37,71,0.1); color: #1F2547;">
+                                    EN                                </a>
+                                                    </div>
+                    </div>
+                </div>
+                
+                <div class="rounded-xl shadow/5 overflow-hidden mt-6" style="background-color: #FFFFFF;">
+                    <a href="https://www.fondsdereserve.fr/mentions-legales/" class="flex items-center justify-between p-4 !no-underline">
+                        <span class="font-inter text-base font-normal leading-6">Mentions légales</span>
+                        <img class="ml-auto inline w-5 h-5 min-w-5 min-h-5" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/chevron-right.svg" alt="Icône chevron droit" />
+                    </a>
+                </div>
+
+                <div class="h-px mt-6" style="background-color: rgba(31,37,71,0.2);"></div>
+
+                <a href="https://www.linkedin.com/company/frr-fonds-de-r-serve-pour-les-retraites/?trk=company_logo" target="_blank" rel="nofollow noopener noreferrer" class="flex flex-row justify-between items-center gap-2.5 !no-underline">
+                    <span>Nous suivre :</span>
+                    <img class="w-10 h-10 p-2.5" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/rs-linkedin.svg" alt="Icône LinkedIn" />
+                </a>
+
+                <div class="h-px" style="background-color: rgba(31,37,71,0.2);"></div>
+
+                <a href="https://www.fondsdereserve.fr/offres/" class="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3.5 rounded-full !no-underline hover:opacity-90 transition-all w-fit mt-4 focus:ring-2 focus:ring-offset-2 focus:ring-ios-blue" style="background-color: #48777E; color: #FFFFFF;">
+                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                    Le FRR recrute                </a>
+
+                <div class="flex flex-col md:flex-row justify-between opacity-50 text-xs gap-10 md:gap-4 items-center mt-10">
+                    <span>© 2026 Fonds de réserve pour les retraites</span>
+                    <span class="inline space-x-[0.0625rem]">
+                        <span class="inline">Made with</span>
+                        <img class="w-4 h-4 inline" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/heart.svg" alt="Icône Love" />
+                        <span class="inline">by My Jungly</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <div id="content" class="site-content grow">
 
@@ -1157,12 +1141,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         if (openBtn && menu) {
             openBtn.addEventListener("click", () => {
                 menu.classList.remove("translate-x-full");
+                openBtn.setAttribute("aria-expanded", "true");
             });
         }
 
         if (closeBtn && menu) {
             closeBtn.addEventListener("click", () => {
                 menu.classList.add("translate-x-full");
+                if (openBtn) openBtn.setAttribute("aria-expanded", "false");
             });
         }
 
@@ -1171,6 +1157,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             btn.addEventListener("click", () => {
                 const sub = btn.nextElementSibling;
                 const svg = btn.querySelector("img");
+                const isExpanded = btn.getAttribute("aria-expanded") === "true";
+                btn.setAttribute("aria-expanded", !isExpanded);
                 if (sub) sub.classList.toggle("hidden");
                 if (svg) svg.classList.toggle("rotate-180");
             });
@@ -1261,17 +1249,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/frr/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script type="module" src="https://www.fondsdereserve.fr/wp-content/themes/frr/dist/assets/app-BKFqLD9Q.js?ver=0.1.0"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" id="slick-carousel-js"></script>
+<script type="module" src="https://www.fondsdereserve.fr/wp-content/themes/frr/dist/assets/app-B0myg2GY.js?ver=0.1.0"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" id="slick-carousel-js"></script>
 <script type="text/javascript" id="filter-publications-js-extra">
 /* <![CDATA[ */
-var ajax_object = {"ajax_url":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","ajaxurl":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","nonce":"f1f0706df5","lang":"fr"};
+var ajax_object = {"ajax_url":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","ajaxurl":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","nonce":"5a60343a8d","lang":"fr"};
 //# sourceURL=filter-publications-js-extra
 /* ]]> */
 </script>
 <script type="text/javascript" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/js/filter-publications.js" id="filter-publications-js"></script>
 <script type="text/javascript" id="publication-simple-filter-js-extra">
 /* <![CDATA[ */
-var ajax_strategie_object = {"ajax_url":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","ajaxurl":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","nonce":"3f5d091f73","lang":"fr"};
+var ajax_strategie_object = {"ajax_url":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","ajaxurl":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","nonce":"2882c1caba","lang":"fr"};
 //# sourceURL=publication-simple-filter-js-extra
 /* ]]> */
 </script>
@@ -1293,27 +1281,6 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 //# sourceURL=https://www.fondsdereserve.fr/wp-includes/js/wp-emoji-loader.min.js
 /* ]]> */
 </script>
-						<style>
-                            .otgs-development-site-front-end a { color: white; }
-                            .otgs-development-site-front-end .icon {
-                                background: url(https://www.fondsdereserve.fr/wp-content/plugins/sitepress-multilingual-cms/vendor/otgs/installer//res/img/icon-wpml-info-white.svg) no-repeat;
-                                width: 20px;
-                                height: 20px;
-                                display: inline-block;
-                                position: absolute;
-                                margin-left: -23px;
-                            }
-                            .otgs-development-site-front-end {
-                                background-size: 32px;
-                                padding: 22px 0px;
-                                font-size: 12px;
-                                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-                                line-height: 18px;
-                                text-align: center;
-                                color: white;
-                                background-color: #33879E;
-                            }
-						</style>
-						<div class="otgs-development-site-front-end"><span class="icon"></span>This site is registered on <a href="https://wpml.org">wpml.org</a> as a development site. Switch to a production site key to <a href="https://wpml.org/faq/how-to-remove-the-this-site-is-registered-on-wpml-org-as-a-development-site-notice/?utm_source=plugin&utm_medium=gui&utm_campaign=wpml-core&utm_term=footer-notice">remove this banner</a>.</div ></body>
+</body>
 
 </html>
