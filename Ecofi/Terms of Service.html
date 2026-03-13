@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="vcHzO2uphgE5fq9NZplhdxdzz3Jmk4fwdACNogh5">
+        <meta name="csrf-token" content="kdULSmHlhpgYva5RQWqudWAxsK7MAtVCImOnfgKX">
 
                                 
         <title>Notre prisme d’investisseur engagé | Ecofi | Actifs pour le futur</title>
@@ -76,7 +76,25 @@
 
         <div class="relative flex flex-col min-h-screen">
                             <div class="contents" x-data="{ bannerHeight: 54 }">
-        <header class="group fixed top-5  transition-colors inset-x-0 px-4 lg:px-6 xl:px-10 z-40 bg-white shadow-md w-[calc(100%-3rem)] flex gap-x-8 max-w-[1392px] rounded-lg lg:rounded-2xl mx-auto h-[4.5rem] lg:h-20 justify-between lg:data-[searching]:gap-x-10 lg:justify-start items-center lg:data-[overlay=light]:text-white lg:data-[overlay=dark]:text-neutral-950' lg:data-[overlay]:shadow-none lg:data-[overlay]:bg-transparent"
+            <div id="headline-banner" class="absolute top-0 inset-x-0 z-10 overflow-hidden py-3 min-h-[3.375rem] bg-black/40" x-resize="bannerHeight = $height">
+            <div class="container flex items-center justify-center gap-4">
+                                    <div class="max-md:hidden flex items-center px-3 h-[1.375rem] lg:h-[1.875rem]  rounded-full backdrop-blur-[25px]  text-body text-white bg-white/20">
+    <div class="truncate min-w-0">
+        Communiqués de presse
+    </div>
+</div>
+                                <p class="text-white line-clamp-2">
+                                            <a class="hover:underline" href="https://www.ecofi.fr/kiosque/publications/financer-la-transition-energetique-et-climatique">
+                            <span class="absolute inset-0"></span>
+                            Ecofi, Goodvest et Team for the Planet lancent le fonds « Team for The Planet – Goodvest Sustainable Bonds by Ecofi
+                        </a>
+                                    </p>
+                            </div>
+        </div>
+        <script>
+            document.documentElement.style.setProperty('--banner-height', `${document.querySelector('#headline-banner').offsetHeight}px`);
+        </script>
+        <header class="group fixed top-5 translate-y-[--banner-height] transition-colors inset-x-0 px-4 lg:px-6 xl:px-10 z-40 bg-white shadow-md w-[calc(100%-3rem)] flex gap-x-8 max-w-[1392px] rounded-lg lg:rounded-2xl mx-auto h-[4.5rem] lg:h-20 justify-between lg:data-[searching]:gap-x-10 lg:justify-start items-center lg:data-[overlay=light]:text-white lg:data-[overlay=dark]:text-neutral-950' lg:data-[overlay]:shadow-none lg:data-[overlay]:bg-transparent"
         :class="{ '!rounded-b-none !transition-none': popoverOpened || menuOpened }"
         x-data="{
             height: 0,
@@ -384,7 +402,7 @@
 
             <div class="contents lg:block absolute top-full inset-x-0 pt-6 pb-10 max-h-[calc(100vh-var(--header-bottom))] overflow-y-auto rounded-b-2xl shadow-md bg-white" x-popover:panel x-cloak>
             <div class="mt-4 lg:mt-0">
-                <div class="grid grid-cols-1 gap-y-4 lg:grid-cols-[300px_300px]  lg:grid-rows-3 lg:gap-6 lg:justify-center">
+                <div class="grid grid-cols-1 gap-y-4 lg:grid-cols-[300px_300px_300px]  lg:grid-rows-3 lg:gap-6 lg:justify-center">
                                                             <a class="block lg:hidden text-body py-1" href="https://www.ecofi.fr/kiosque">
     Nos actualités
 </a>
@@ -474,7 +492,30 @@
 <path d="M16 8.4L7.09999 17.3C6.91665 17.4833 6.68332 17.575 6.39999 17.575C6.11665 17.575 5.88332 17.4833 5.69999 17.3C5.51665 17.1167 5.42499 16.8833 5.42499 16.6C5.42499 16.3167 5.51665 16.0833 5.69999 15.9L14.6 7H6.99999C6.71665 7 6.47915 6.90417 6.28749 6.7125C6.09582 6.52083 5.99999 6.28333 5.99999 6C5.99999 5.71667 6.09582 5.47917 6.28749 5.2875C6.47915 5.09583 6.71665 5 6.99999 5H17C17.2833 5 17.5208 5.09583 17.7125 5.2875C17.9042 5.47917 18 5.71667 18 6V16C18 16.2833 17.9042 16.5208 17.7125 16.7125C17.5208 16.9042 17.2833 17 17 17C16.7167 17 16.4792 16.9042 16.2875 16.7125C16.0958 16.5208 16 16.2833 16 16V8.4Z"/>
 </svg>                                                                            </div>
                                 </div>
-                                                                                </div>
+                                                                                        <div class="lg:col-start-3 lg:row-span-full relative hidden lg:flex flex-col bg-neutral-50 aspect-[1/1] rounded-2xl p-6">
+                                    <div class="mb-4 flex items-center justify-between gap-2  [&:not(:has(*))]:hidden">
+                                                                                    <div class="min-w-0 flex items-center px-3 h-[1.375rem] lg:h-[1.875rem]  rounded-full backdrop-blur-[25px]  text-body bg-white text-neutral-950">
+    <div class="truncate min-w-0">
+        Communiqués de presse
+    </div>
+</div>
+                                                                                                                            <p class="shrink-0 text-body">
+                                                10 mars 2026
+                                            </p>
+                                                                            </div>
+                                    <div class="flex-1 min-h-0 overflow-hidden">
+                                        <h2 class="text-body font-semibold">
+                                                                                            <a class="hover:underline" href="https://www.ecofi.fr/kiosque/publications/financer-la-transition-energetique-et-climatique">
+                                                    <span class="absolute inset-0 rounded-2xl"></span>
+                                                    Ecofi, Goodvest et Team for the Planet lancent le fonds « Team for The Planet – Goodvest Sustainable Bonds by Ecofi
+                                                </a>
+                                                                                    </h2>
+                                                                                    <p class="mt-2 line-clamp-5 text-body">
+                                                Normalisation des taux d’intérêt, besoins croissants de financement de la transition énergétique et climatique, exigence renforcée de crédibilité des démarches ESG : c’est dans ce contexte qu’Ecofi, Goodvest et Team for the Planet annoncent le lancement du fonds <br />
+                                            </p>
+                                                                            </div>
+                                                                    </div>
+                                                    </div>
             </div>
         </div>
         <div class="absolute inset-x-0 top-full pointer-events-none -translate-y-2 h-2 bg-white hidden lg:block" x-show="$popover.isOpen" x-cloak></div>
@@ -1594,7 +1635,7 @@
 
             <footer>
     <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-<div wire:snapshot="{&quot;data&quot;:{&quot;subscribeAll&quot;:false,&quot;subscribeLists&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;newsletterFirstname&quot;:&quot;&quot;,&quot;newsletterLastname&quot;:&quot;&quot;,&quot;newsletterEmail&quot;:&quot;&quot;,&quot;investorProfile&quot;:&quot;P&quot;,&quot;success&quot;:false,&quot;extraFields&quot;:[{&quot;my_name&quot;:&quot;&quot;,&quot;valid_from&quot;:&quot;eyJpdiI6IkxhaDhYYkRHNEJLMEtaUGFhV0FBVFE9PSIsInZhbHVlIjoiUnZlWjZnV21UOSsrZGtQb2VZd0QzZz09IiwibWFjIjoiZDZiMTZhMDc2Njg3ZjQ0ZDA5YjkxNmQ0NTY0OTM5OTk0Y2ZkYTU0M2IzMDgzMmI5ZmZkZWYzNDhmYTQ3MGM4NyIsInRhZyI6IiJ9&quot;},{&quot;class&quot;:&quot;Spatie\\Honeypot\\Http\\Livewire\\Concerns\\HoneypotData&quot;,&quot;s&quot;:&quot;wrbl&quot;}]},&quot;memo&quot;:{&quot;id&quot;:&quot;kj0SLf6WuHwnWEHCPX9J&quot;,&quot;name&quot;:&quot;newsletter-form&quot;,&quot;path&quot;:&quot;demarche-isr&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;f1416b455a60e62eb59b7ef1ba06757b4beb6bb10a413145e66735b916baa69d&quot;}" wire:effects="[]" wire:id="kj0SLf6WuHwnWEHCPX9J" class="py-14 bg-white">
+<div wire:snapshot="{&quot;data&quot;:{&quot;subscribeAll&quot;:false,&quot;subscribeLists&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;newsletterFirstname&quot;:&quot;&quot;,&quot;newsletterLastname&quot;:&quot;&quot;,&quot;newsletterEmail&quot;:&quot;&quot;,&quot;investorProfile&quot;:&quot;P&quot;,&quot;success&quot;:false,&quot;extraFields&quot;:[{&quot;my_name&quot;:&quot;&quot;,&quot;valid_from&quot;:&quot;eyJpdiI6IlJ6QzBtY011T2NCTkVPZnByUCtpeGc9PSIsInZhbHVlIjoiL1hHNkcvRHU4MnhEUVY5NmdXdkpoZz09IiwibWFjIjoiZDZjMmE1MWQ4MzllMTU1NTk5YzdkZDNjM2NlZGFhOGFiNTcyNDI3NjkzMGQxOTJiM2M0NTc3MWQ1YWFiNTkzYSIsInRhZyI6IiJ9&quot;},{&quot;class&quot;:&quot;Spatie\\Honeypot\\Http\\Livewire\\Concerns\\HoneypotData&quot;,&quot;s&quot;:&quot;wrbl&quot;}]},&quot;memo&quot;:{&quot;id&quot;:&quot;X27n8xTyKhW8rm9rzkLD&quot;,&quot;name&quot;:&quot;newsletter-form&quot;,&quot;path&quot;:&quot;demarche-isr&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;63d6c83439acbb37b407fe4d683668e2a6e48bd9f97959e045b6922f1e05abe1&quot;}" wire:effects="[]" wire:id="X27n8xTyKhW8rm9rzkLD" class="py-14 bg-white">
     <div class="container">
         <!--[if BLOCK]><![endif]-->            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <div aria-labelledby="newsletter-topics-label">
@@ -1653,16 +1694,16 @@
                 </div>
                 <div>
                     <form id="newsletter-form" wire:submit="store">
-                        <input type="hidden" name="_token" value="vcHzO2uphgE5fq9NZplhdxdzz3Jmk4fwdACNogh5" autocomplete="off">                        <!--[if BLOCK]><![endif]-->    <div id="my_name_p8YbMXDEIZVKJsYp_wrap"  style="display: none" aria-hidden="true">
-        <input id="my_name_p8YbMXDEIZVKJsYp"
-               name="my_name_p8YbMXDEIZVKJsYp"
+                        <input type="hidden" name="_token" value="kdULSmHlhpgYva5RQWqudWAxsK7MAtVCImOnfgKX" autocomplete="off">                        <!--[if BLOCK]><![endif]-->    <div id="my_name_loqsWryFcGnG7pgZ_wrap"  style="display: none" aria-hidden="true">
+        <input id="my_name_loqsWryFcGnG7pgZ"
+               name="my_name_loqsWryFcGnG7pgZ"
                type="text"
                value=""
                 wire:model.defer="extraFields.my_name"                autocomplete="nope"
                tabindex="-1">
         <input name="valid_from"
                type="text"
-               value="eyJpdiI6Ikc0NnViRGpCZnQwRWxvbVJZYktya2c9PSIsInZhbHVlIjoiVnF0NlI1eUtudmtOQmliNm5hTzAxQT09IiwibWFjIjoiODNmMWY3ZWFkOTg3M2U0Y2JjNjY0YjFmNjZhMDlkYmE2Y2JmNmE2OWU5ZTJjOGUyMzBkMGI4MmYxOWQ2NzRlMyIsInRhZyI6IiJ9"
+               value="eyJpdiI6IldvajdvdGEzN0VkWXUwMFMzRDNYc0E9PSIsInZhbHVlIjoiWGxNSVdKQ2VXSmpDTkFsT0xrTDFzQT09IiwibWFjIjoiOTYzZWVjMmI4ZGI3MjVkNjk3MTAwNWQ4MGQ2NTc5NTM0YTA0N2E4NWVjODM0ZDljZDAxNjcwOGM0M2Y4ZDUwZiIsInRhZyI6IiJ9"
                 wire:model.defer="extraFields.valid_from"                autocomplete="off"
                tabindex="-1">
     </div>
@@ -2054,11 +2095,11 @@
     </div>
 </footer>
 
-            <script  data-navigate-once="true">window.livewireScriptConfig = {"csrf":"vcHzO2uphgE5fq9NZplhdxdzz3Jmk4fwdACNogh5","uri":"\/livewire\/update","progressBar":"","nonce":""};</script>
+            <script  data-navigate-once="true">window.livewireScriptConfig = {"csrf":"kdULSmHlhpgYva5RQWqudWAxsK7MAtVCImOnfgKX","uri":"\/livewire\/update","progressBar":"","nonce":""};</script>
         </div>
 
         <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-<div wire:snapshot="{&quot;data&quot;:{&quot;isOpen&quot;:false,&quot;selectedProfile&quot;:null,&quot;hasReadTerms&quot;:false,&quot;profileHasBeenSet&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;EsaOI8XKUqGQKT1iB0ao&quot;,&quot;name&quot;:&quot;investor-profile-modal&quot;,&quot;path&quot;:&quot;demarche-isr&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;f553fafecb1dc8257b72b9b90e4d88353d5104e8d3384224cd033be570e3f95e&quot;}" wire:effects="[]" wire:id="EsaOI8XKUqGQKT1iB0ao"
+<div wire:snapshot="{&quot;data&quot;:{&quot;isOpen&quot;:false,&quot;selectedProfile&quot;:null,&quot;hasReadTerms&quot;:false,&quot;profileHasBeenSet&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;YDWJ9ath5jIOvGKhWwlT&quot;,&quot;name&quot;:&quot;investor-profile-modal&quot;,&quot;path&quot;:&quot;demarche-isr&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;ca12b9ee8bb3c01155005bfcd924ef6a466043ab6febe6905fe841b9592f6a9a&quot;}" wire:effects="[]" wire:id="YDWJ9ath5jIOvGKhWwlT"
     role="dialog"
     aria-modal="true"
     aria-labelledby="investor-profile-title"
