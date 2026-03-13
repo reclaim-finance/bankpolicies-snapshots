@@ -223,7 +223,7 @@ Javascript is disabled in your browser and some features on this website, like t
 <ul class="utility-links utility-navList" aria-label="menu">
 
 <li class=" ">
-    <a  class="text-decoration-none" aria-label="Find out where you can login if you&#039;re a Standard Life customer" 
+    <a  class="dropdown-nav-link-text text-decoration-none" aria-label="Find out where you can login if you&#039;re a Standard Life customer" 
         class=""
         href="/about/brands/standard-life-brand" 
         rel="noopener noreferrer"
@@ -234,7 +234,7 @@ Javascript is disabled in your browser and some features on this website, like t
 <li class="dropdown-nav-item has-mega">
 <a class="sl-main-header__navlink dropdown-nav-link-text text-decoration-none" href="#" itemprop="url" aria-expanded="false" aria-controls="brands-mega-5cd4a3a1-7666-4ae0-b9d1-b1ae7e23a179" id="/|topNavigationDropdown|Our brands|Our brands"
 >Our brands
-<i class="fa fa-solid fa-chevron-down nav-chevron"></i>
+<i class="fa fa-solid fa-chevron-down nav-chevron dropdown-icon"></i>
 </a>
 </li>
 <div class="mega-dropdown megamenu mega-menu-dropdown" id="brands-mega-5cd4a3a1-7666-4ae0-b9d1-b1ae7e23a179" role="region" aria-hidden>
@@ -1504,6 +1504,26 @@ button.setAttribute('aria-expanded', 'false');
 </div>
 </header>
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+const sharePrice = document.getElementById("sharePriceWrapper");
+const desktopUtility = document.querySelector(".sharePriceDesktop");
+const mobileUtility = document.querySelector(".sharePriceMobile");
+function moveSharePrice() {
+if (window.innerWidth > 768) {
+if (desktopUtility && !desktopUtility.contains(sharePrice)) {
+desktopUtility.appendChild(sharePrice);
+}
+} else {
+if (mobileUtility && !mobileUtility.contains(sharePrice)) {
+mobileUtility.appendChild(sharePrice);
+}
+}
+}
+moveSharePrice();
+window.addEventListener("resize", moveSharePrice);
+});
+</script>
+<script>
 var cookieDomain = "standardlifeplc.com";
 var searchApplication = "StandardLife";
 var searchApiSubpath = "/get/content/autocomplete/";
@@ -1536,24 +1556,6 @@ const utilityChannels = document.querySelector('.mobile-header-inner .utility-na
 if ((window.innerWidth<768 && utilityChannels.querySelectorAll('li').length === 0 && utilityChannels.querySelectorAll('iframe').length === 0 && !utilityChannels.querySelectorAll('#sharePriceWrapper').length === 0)) {
 utilityChannels.style.display = "none";
 }
-document.addEventListener("DOMContentLoaded", function () {
-const sharePrice = document.getElementById("sharePriceWrapper");
-const desktopUtility = document.querySelector(".sharePriceDesktop");
-const mobileUtility = document.querySelector(".sharePriceMobile");
-function moveSharePrice() {
-if (window.innerWidth > 768) {
-if (desktopUtility && !desktopUtility.contains(sharePrice)) {
-desktopUtility.appendChild(sharePrice);
-}
-} else {
-if (mobileUtility && !mobileUtility.contains(sharePrice)) {
-mobileUtility.appendChild(sharePrice);
-}
-}
-}
-moveSharePrice();
-window.addEventListener("resize", moveSharePrice);
-});
 </script>
 <main role="main" class="main" id="content" itemscope itemprop="mainContentOfPage">
 <section class="bleedBanner">
@@ -1686,11 +1688,11 @@ window.addEventListener('resize',adjustBannerHeight);
 
 
     <section class="banner-section page-banner-section has-bg-image has-overlay overlay-aquaToTrans-grad_1  boxedImagePageBanner imgleft" alt="" >
-        <div class="bg-image-container loaded" aria-label='Company logos for Standard Life, Sun Life, Reassure, Phoenix Life, Phoenix Wealth and Phoenix Corporate Investment Services' role='img' >
+        <div class="bg-image-container loaded hide-margin-padding" aria-label='Company logos for Standard Life, Sun Life, Reassure, Phoenix Life, Phoenix Wealth and Phoenix Corporate Investment Services' role='img' >
             <img src="https://library.standardlife.co.uk/Brand_logos_x2.png" alt="" >
         </div>
         <div class="justify-right grid-box">
-            <div class="banner-section__inner align-left text-left stack-order-inFront grid-colspan-6 ">
+            <div class="banner-section__inner align-left text-left stack-order-inFront grid-colspan-6 hide-margin-padding">
             <H2 class="" id="" style="">We're behind some of the industry's leading brands </H2>    
                 <div class="subtitle">
 
@@ -2174,6 +2176,7 @@ href="https://www.x.com/standardlifeuk" rel="noopener noreferrer" target="_blank
 <li><a href="/news-and-views/media-team" id="Media Contacts"> Media Contacts</a></li>
 <li><a href="/investors/investor-relations-contacts" id="Investor Contacts"> Investor Contacts</a></li>
 <li><a href="/speak-up" id="Speak up"> Speak up</a></li>
+</ul>
 </div>
 <script>
 function footerColaccordion(footerId, footerIconId){
@@ -2201,6 +2204,7 @@ $footerIcon.toggleClass('fa fa-solid fa-chevron-down fa fa-solid fa-chevron-up')
 <li><a href="/careers" id="Careers"> Careers</a></li>
 <li><a href="/standard-life-fund-managers" id="Standard Life Fund Managers"> Standard Life Fund Managers</a></li>
 <li><a href="/glossary" id="Glossary"> Glossary</a></li>
+</ul>
 </div>
 <script>
 function footerColaccordion(footerId, footerIconId){
@@ -2232,6 +2236,7 @@ $footerIcon.toggleClass('fa fa-solid fa-chevron-down fa fa-solid fa-chevron-up')
 <li><a href="/financial-crime-prevention-compliance" id="Financial crime prevention compliance"> Financial crime prevention compliance</a></li>
 <li><a href="https://www.mypensioninfo.com/abbey-life-staff-pension-scheme" rel="noopener noreferrer" target="_blank" id="Abbey Life Staff Pension Scheme"> Abbey Life Staff Pension Scheme</a></li>
 <li><a href="/sitemap" id="Sitemap"> Sitemap</a></li>
+</ul>
 </div>
 <script>
 function footerColaccordion(footerId, footerIconId){
@@ -2449,7 +2454,7 @@ background-image: url("/.resources/standardlife-public-lm/webresources/images/ch
 background-repeat:no-repeat;
 }
 </style>
-<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=465431407" async></script></body>
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=609509862" async></script></body>
 </html><script>
 var SLPersonalization = 0;
 var traitValues="0";
