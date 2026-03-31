@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="m1TofylK3R2YZCP932H4HKpsDjIhcrq6hTgF4Du3">
+        <meta name="csrf-token" content="n8SUvlGUI02y9grNLP3bscVBanEsYnrBJaUKOqLi">
 
                                 
         <title>Notre prisme d’investisseur engagé | Ecofi | Actifs pour le futur</title>
@@ -47,7 +47,7 @@
             </script>
             <!-- End Matomo Tag Manager -->
         
-        <script type="text/javascript">const Ziggy={"url":"https:\/\/www.ecofi.fr","port":null,"defaults":{},"routes":{"share-history.nav.index":{"uri":"share-history\/{share}","methods":["GET","HEAD"],"parameters":["share"],"bindings":{"share":"id"}}}};</script>                <link rel="preload" as="style" href="https://www.ecofi.fr/build/assets/app-BXJZXq--.css" /><link rel="modulepreload" as="script" href="https://www.ecofi.fr/build/assets/app-nZIk7FPj.js" /><link rel="modulepreload" as="script" href="https://www.ecofi.fr/build/assets/common-B7XKXrvI.js" /><link rel="stylesheet" href="https://www.ecofi.fr/build/assets/app-BXJZXq--.css" data-navigate-track="reload" /><script type="module" src="https://www.ecofi.fr/build/assets/app-nZIk7FPj.js" data-navigate-track="reload"></script>        <style>
+        <script type="text/javascript">const Ziggy={"url":"https:\/\/www.ecofi.fr","port":null,"defaults":{},"routes":{"share-history.nav.index":{"uri":"share-history\/{share}","methods":["GET","HEAD"],"parameters":["share"],"bindings":{"share":"id"}}}};</script>                <link rel="preload" as="style" href="https://www.ecofi.fr/build/assets/app-CN6TlOYr.css" /><link rel="modulepreload" as="script" href="https://www.ecofi.fr/build/assets/app-CgDVra7v.js" /><link rel="modulepreload" as="script" href="https://www.ecofi.fr/build/assets/common-CuexbARx.js" /><link rel="stylesheet" href="https://www.ecofi.fr/build/assets/app-CN6TlOYr.css" data-navigate-track="reload" /><script type="module" src="https://www.ecofi.fr/build/assets/app-CgDVra7v.js" data-navigate-track="reload"></script>        <style>
             [x-cloak] { display: none!important; }
         </style>
         
@@ -67,7 +67,8 @@
 
 
 
-    </head>
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.list-item][wire\:loading\.list-item], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+</head>
     <body class="font-sans text-body antialiased text-neutral-950 ">
         <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-neutral-950 focus:rounded-lg focus:shadow-lg focus:ring-2 focus:ring-neutral-950">
             Passer au contenu
@@ -83,7 +84,7 @@
 ></template>
 
         <div class="relative flex flex-col min-h-screen">
-                            <div class="contents" x-data="{ bannerHeight: 54 }">
+                            <div class="contents" x-data="{ bannerHeight: document.querySelector('#headline-banner')?.offsetHeight ?? 0 }">
         <header class="group fixed top-5  transition-colors inset-x-0 px-4 lg:px-6 xl:px-10 z-40 bg-white shadow-md w-[calc(100%-3rem)] flex gap-x-8 max-w-[1392px] rounded-lg lg:rounded-2xl mx-auto h-[4.5rem] lg:h-20 justify-between lg:data-[searching]:gap-x-10 lg:justify-start items-center lg:data-[overlay=light]:text-white lg:data-[overlay=dark]:text-neutral-950' lg:data-[overlay]:shadow-none lg:data-[overlay]:bg-transparent"
         :class="{ '!rounded-b-none !transition-none': popoverOpened || menuOpened }"
         x-data="{
@@ -842,8 +843,7 @@
     </div>
 
 
-    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-        <div class="relative mt-4 min-w-[var(--button-width,4rem)] left-0 bg-white border border-neutral-100 rounded-xl overflow-hidden z-10 "
+    <div class="relative mt-4 min-w-[var(--button-width,4rem)] left-0 bg-white border border-neutral-100 rounded-xl overflow-hidden z-10 "
                             :style="{ '--button-width': `${buttonWidth}px` }"
                         x-listbox:options
             x-on:keydown.enter="$dispatch('willchange')"
@@ -878,11 +878,8 @@
         </template>
             </div>
 
-            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-        </div>
-<!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-</div>
+                    </div>
+    </div>
                                     <div class="pb-4 overflow-x-auto flex hidden  md:flex items-center"
     x-on:click="$el.scrollWidth > $el.offsetWidth && $event.target.scrollIntoView({ block: 'nearest', inline: 'nearest' })"
     x-tabs:list
@@ -1204,7 +1201,7 @@
                         L'un de nos 4 objectifs statutaires d’entreprise à mission est justement de « Contribuer par notre politique d’investissement et d’influence à l’amélioration des pratiques responsables des émetteurs et de la Place. »<br><br>Pour appuyer notre méthodologie propriétaire d'analyse extra-financière PRISME, nous avons mis en place une politique d’engagement actionnarial – vote et dialogue –  systématique, exigeante et active.
                     </p>
                                                     <div class="mt-auto pt-8 space-y-8">
-                                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 max-w-[467px]">
+                                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 max-w-[467px]" >
         <h3 class="mb-4 text-emphasis text-wrap font-semibold">
             Rapport d&#039;engagement actionnarial
         </h3>
@@ -1392,7 +1389,7 @@
                 Téléchargez nos contenus en un clic
             </h2>
             <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 lg:gap-8">
-                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 ">
+                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 " >
         <h3 class="mb-4 text-emphasis text-wrap font-semibold">
             Rapport d&#039;engagement actionnarial
         </h3>
@@ -1414,7 +1411,7 @@
         </div>
     </article>
 
-                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 ">
+                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 " >
         <h3 class="mb-4 text-emphasis text-wrap font-semibold">
             Déclaration PRI
         </h3>
@@ -1436,7 +1433,7 @@
         </div>
     </article>
 
-                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 ">
+                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 " >
         <h3 class="mb-4 text-emphasis text-wrap font-semibold">
             Politique d&#039;engagement
         </h3>
@@ -1458,7 +1455,7 @@
         </div>
     </article>
 
-                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 ">
+                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 " >
         <h3 class="mb-4 text-emphasis text-wrap font-semibold">
             Note PRI
         </h3>
@@ -1480,7 +1477,7 @@
         </div>
     </article>
 
-                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 ">
+                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 " >
         <h3 class="mb-4 text-emphasis text-wrap font-semibold">
             Liste des OPC ISR
         </h3>
@@ -1502,7 +1499,7 @@
         </div>
     </article>
 
-                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 ">
+                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 " >
         <h3 class="mb-4 text-emphasis text-wrap font-semibold">
             Déclaration sur les incidences en matière de durabilité
         </h3>
@@ -1524,7 +1521,7 @@
         </div>
     </article>
 
-                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 ">
+                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 " >
         <h3 class="mb-4 text-emphasis text-wrap font-semibold">
             Article 29 - Informations ESG investisseur
         </h3>
@@ -1546,7 +1543,7 @@
         </div>
     </article>
 
-                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 ">
+                                    <article class="relative p-8 flex flex-col rounded-2xl min-h-[180px] ring-1 ring-inset ring-violet-100 " >
         <h3 class="mb-4 text-emphasis text-wrap font-semibold">
             Article 29 - Ecofi Trésorerie
         </h3>
@@ -1570,7 +1567,7 @@
 
                             </div>
             <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
-                                    <article class="relative isolate flex flex-col p-6 md:p-10 rounded-lg lg:rounded-2xl overflow-hidden bg-gradient-[315deg]  from-violet-100/75 to-violet-500/75 text-violet-900">
+                                    <article class="relative isolate flex flex-col p-6 md:p-10 rounded-lg lg:rounded-2xl overflow-hidden bg-gradient-[315deg]  from-violet-100/75 to-violet-500/75 text-violet-900" >
         <h2 class="flex-1 text-h4">
             Notre démarche ISR
         </h2>
@@ -1583,7 +1580,7 @@
         </div>
     </article>
 
-                                    <article class="relative isolate flex flex-col p-6 md:p-10 rounded-lg lg:rounded-2xl overflow-hidden bg-gradient-[225deg] from-violet-800 to-violet-400 text-white">
+                                    <article class="relative isolate flex flex-col p-6 md:p-10 rounded-lg lg:rounded-2xl overflow-hidden bg-gradient-[225deg] from-violet-800 to-violet-400 text-white" >
         <h2 class="flex-1 text-h4">
             Code de transparence
         </h2>
@@ -1602,7 +1599,7 @@
 
             <footer>
     <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-<div wire:snapshot="{&quot;data&quot;:{&quot;subscribeAll&quot;:false,&quot;subscribeLists&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;newsletterFirstname&quot;:&quot;&quot;,&quot;newsletterLastname&quot;:&quot;&quot;,&quot;newsletterEmail&quot;:&quot;&quot;,&quot;investorProfile&quot;:&quot;P&quot;,&quot;success&quot;:false,&quot;newsletterCaptcha&quot;:&quot;&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;KbT1PYJNBUpiKfPXTJJk&quot;,&quot;name&quot;:&quot;newsletter-form&quot;,&quot;path&quot;:&quot;demarche-isr&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;a3d31abef48217e3fbbd87621aacc1f1af3ef0013cb2f047e3c906bd64162235&quot;}" wire:effects="[]" wire:id="KbT1PYJNBUpiKfPXTJJk" class="py-14 bg-white">
+<div wire:key="lw-277751308-0" wire:snapshot="{&quot;data&quot;:{&quot;subscribeAll&quot;:false,&quot;subscribeLists&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;newsletterFirstname&quot;:&quot;&quot;,&quot;newsletterLastname&quot;:&quot;&quot;,&quot;newsletterEmail&quot;:&quot;&quot;,&quot;investorProfile&quot;:&quot;P&quot;,&quot;success&quot;:false,&quot;newsletterCaptcha&quot;:&quot;&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;vG8YVHoBptdiAyLih9L5&quot;,&quot;name&quot;:&quot;newsletter-form&quot;,&quot;path&quot;:&quot;demarche-isr&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;,&quot;islands&quot;:[]},&quot;checksum&quot;:&quot;2aa593a65a2672db605272c12428fc34a85ed988abcd8ea72a89d7ecb92f8c8b&quot;}" wire:effects="[]" wire:id="vG8YVHoBptdiAyLih9L5" wire:name="newsletter-form" class="py-14 bg-white">
     <div class="container">
         <!--[if BLOCK]><![endif]-->            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <div aria-labelledby="newsletter-topics-label">
@@ -1797,8 +1794,7 @@
 </svg>        </div>
     <!--[if ENDBLOCK]><![endif]--></div>
 
-                                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-        <div class="absolute top-full min-w-[var(--button-width,4rem)] left-0 bg-white border border-neutral-100 rounded-xl overflow-hidden z-10 "
+                                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->        <div class="absolute top-full min-w-[var(--button-width,4rem)] left-0 bg-white border border-neutral-100 rounded-xl overflow-hidden z-10 "
                             :style="{ '--button-width': `${buttonWidth}px` }"
                         x-listbox:options
             x-on:keydown.enter="$dispatch('willchange')"
@@ -1856,11 +1852,9 @@
                                         <!--[if ENDBLOCK]><![endif]-->
             </div>
 
-            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-        </div>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->        </div>
 <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-</div>
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]--></div>
                                 <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
 </div>
                             <!--[if BLOCK]><![endif]-->                                <div>
@@ -1929,9 +1923,10 @@
 <!--[if ENDBLOCK]><![endif]-->                                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                </div>
                             <!--[if ENDBLOCK]><![endif]-->                        </div>
                         <div class="mt-10 flex items-center gap-x-4 xl:gap-x-6">
-                            <button class="group/btn isolate relative inline-flex items-center justify-center transition-colors duration-300 ease-out overflow-hidden rounded-full disabled:bg-neutral-50 disabled:text-neutral-400 disabled:pointer-events-none px-6 py-3 gap-x-3 text-body font-semibold bg-neutral-950 text-white hover:text-neutral-950 shrink-0" type="submit"><span class="absolute top-1/2 -z-10 -translate-y-1/2 w-full aspect-[1/1] rounded-full transition-[right] duration-300 ease-out right-full group-hover/btn:right-0 bg-neutral-100"></span>
-        S’abonner</button>
-                            <div>
+                            <!--[if BLOCK]><![endif]-->    <!--[if BLOCK]><![endif]-->    <button class="group/btn isolate relative inline-flex items-center justify-center transition-colors duration-300 ease-out overflow-hidden rounded-full disabled:bg-neutral-50 disabled:text-neutral-400 disabled:pointer-events-none px-6 py-3 gap-x-3 text-body font-semibold bg-neutral-950 text-white hover:text-neutral-950 shrink-0" type="submit"><span class="absolute top-1/2 -z-10 -translate-y-1/2 w-full aspect-[1/1] rounded-full transition-[right] duration-300 ease-out right-full group-hover/btn:right-0 bg-neutral-100"></span>
+        S’abonner
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]--></button>
+<!--[if ENDBLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <div>
                                 En cliquant sur « S’abonner », vous acceptez notre
                                 <a class="underline" href="https://www.ecofi.fr/politique-de-confidentialite">politique de confidentialité</a>.
                             </div>
@@ -2111,19 +2106,19 @@
     </div>
 </footer>
 
-            <script  data-navigate-once="true">window.livewireScriptConfig = {"csrf":"m1TofylK3R2YZCP932H4HKpsDjIhcrq6hTgF4Du3","uri":"\/livewire\/update","progressBar":"","nonce":""};</script>
+            <script  data-navigate-once="true">window.livewireScriptConfig = {"csrf":"n8SUvlGUI02y9grNLP3bscVBanEsYnrBJaUKOqLi","uri":"https:\/\/www.ecofi.fr\/livewire-01b2dcb4\/update","moduleUrl":"https:\/\/www.ecofi.fr\/livewire-01b2dcb4","progressBar":"","nonce":""};</script>
         </div>
 
         <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-<div wire:snapshot="{&quot;data&quot;:{&quot;isOpen&quot;:false,&quot;selectedProfile&quot;:null,&quot;hasReadTerms&quot;:false,&quot;profileHasBeenSet&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;t2HUfbHaLMQnBnTI303t&quot;,&quot;name&quot;:&quot;investor-profile-modal&quot;,&quot;path&quot;:&quot;demarche-isr&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;},&quot;checksum&quot;:&quot;5ad2545e6d2985dcbaad8fd1bb9089f3a0c506c3cc5a9cc775f6bbeb7fed2638&quot;}" wire:effects="[]" wire:id="t2HUfbHaLMQnBnTI303t"
+<div wire:key="lw-743567383-0-1" wire:snapshot="{&quot;data&quot;:{&quot;fromHeaderButton&quot;:false,&quot;isOpen&quot;:false,&quot;selectedProfile&quot;:null,&quot;hasReadTerms&quot;:false,&quot;profileHasBeenSet&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;DqLwAv5NdgbHqZqqSMae&quot;,&quot;name&quot;:&quot;investor-profile-modal&quot;,&quot;path&quot;:&quot;demarche-isr&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;fr&quot;,&quot;islands&quot;:[]},&quot;checksum&quot;:&quot;c9096f465848aab49b59699f3bf401b0e12431267ffa905fcd62444ffe2fa420&quot;}" wire:effects="[]" wire:id="DqLwAv5NdgbHqZqqSMae" wire:name="investor-profile-modal"
     role="dialog"
     aria-modal="true"
     aria-labelledby="investor-profile-title"
             x-cloak
-        x-on:open-investor-profile-modal.document="$wire.isOpen = true"
+        x-on:open-investor-profile-modal.document="$wire.isOpen = true; $wire.fromHeaderButton = true"
+    x-on:keydown.escape="$wire.fromHeaderButton && ($wire.isOpen = false)"
     x-effect="
         $dispatch('header-dialog-overlay', $wire.isOpen ? 'light' : null);
-        document.documentElement.style.overflow = $wire.isOpen ? 'hidden' : ''
     "
 >
     <div class="fixed inset-0 z-50 flex flex-col overflow-y-auto text-white bg-gradient-to-l from-blue-500 to-blue-800"
@@ -2131,7 +2126,7 @@
         x-trap.noscroll.inert="$wire.isOpen"
         x-on:scroll="$dispatch('header-dialog-overlay', $wire.isOpen && $el.scrollTop < 100 ? 'light' : null)"
     >
-        <div class="flex-1 lg:min-h-0 py-8 lg:py-20 flex flex-col mt-[--header-bottom]">
+        <div class="flex-1 lg:min-h-0 py-8 lg:py-20 flex flex-col mt-20">
             <form class="flex-1 lg:min-h-0 container grid content-start grid-cols-1 lg:grid-cols-2 gap-x-10 xl:gap-x-20 outline-none"
                 wire:submit="store"
                 tabindex="-1"
@@ -2167,9 +2162,10 @@
                         En cliquant sur “Accepter et poursuivre” vous reconnaissez avoir lu et compris cette page, vous acceptez de vous conformer à son contenu et vous confirmez que vous accédez à ce site Internet conformément aux lois et réglementations de la juridiction ou du pays dans lequel vous résidez. »
                     </p>
                     <div class="mt-4 lg:mt-6 flex flex-col md:flex-row items-start md:items-center gap-y-4 gap-x-10">
-                        <button class="group/btn isolate relative inline-flex items-center justify-center transition-colors duration-300 ease-out overflow-hidden rounded-full disabled:bg-neutral-50 disabled:text-neutral-400 disabled:pointer-events-none px-6 py-3 gap-x-3 text-body font-semibold bg-white text-neutral-900 hover:text-neutral-950 shrink-0" type="submit" disabled="disabled" x-bind:disabled="!$wire.selectedProfile || !$wire.hasReadTerms"><span class="absolute top-1/2 -z-10 -translate-y-1/2 w-full aspect-[1/1] rounded-full transition-[right] duration-300 ease-out right-full group-hover/btn:right-0 bg-neutral-100"></span>
-        Accepter et poursuivre</button>
-                        <div class="text-small">
+                        <!--[if BLOCK]><![endif]-->    <!--[if BLOCK]><![endif]-->    <button class="group/btn isolate relative inline-flex items-center justify-center transition-colors duration-300 ease-out overflow-hidden rounded-full disabled:bg-neutral-50 disabled:text-neutral-400 disabled:pointer-events-none px-6 py-3 gap-x-3 text-body font-semibold bg-white text-neutral-900 hover:text-neutral-950 shrink-0" type="submit" disabled="disabled" x-bind:disabled="!$wire.selectedProfile || !$wire.hasReadTerms"><span class="absolute top-1/2 -z-10 -translate-y-1/2 w-full aspect-[1/1] rounded-full transition-[right] duration-300 ease-out right-full group-hover/btn:right-0 bg-neutral-100"></span>
+        Accepter et poursuivre
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]--></button>
+<!--[if ENDBLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        <div class="text-small">
                             Vous devez sélectionner un profil et prendre connaissance de l’ensemble des conditions afin de pouvoir poursuivre.
                         </div>
                     </div>
@@ -2197,5 +2193,6 @@
     </div>
 </div>
 
-            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </body>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    
+</body>
 </html>
