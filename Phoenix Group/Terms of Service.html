@@ -18,6 +18,60 @@
 dataLayer = [];
 var cookieDomain = "standardlifeplc.com";
 var cookieVersion = "2";
+function getPersistedConsent() {
+let consentCookie = document.cookie
+.split('; ')
+.find(function(row) { return row.startsWith('sl#cookiepreferences='); });
+if (consentCookie) {
+let consentValue = JSON.parse(
+decodeURIComponent(consentCookie.split('=')[1])
+);
+// '3' = Advertising / Marketing
+// '2' = Performance / Analytics
+// Adjust these IDs to match your cookie category configuration
+let isAdAllowed = consentValue.cookiecategoryids.includes('3');
+let isAnalyticsAllowed = consentValue.cookiecategoryids.includes('2');
+return {
+ad_storage: isAdAllowed ? 'granted' : 'denied',
+analytics_storage: isAnalyticsAllowed ? 'granted' : 'denied',
+ad_user_data: isAdAllowed ? 'granted' : 'denied',
+ad_personalization: isAdAllowed ? 'granted' : 'denied',
+consentFound: true
+};
+}
+// No prior consent found: default all to 'denied'
+return {
+ad_storage: 'denied',
+analytics_storage: 'denied',
+ad_user_data: 'denied',
+ad_personalization: 'denied',
+consentFound: false
+};
+}
+let persistedConsent = getPersistedConsent();
+// Always push consent_default first.
+// This establishes the baseline consent state before GTM loads.
+window.dataLayer.push({
+'event': 'consent_default',
+'consent_ad_storage': persistedConsent.ad_storage,
+'consent_analytics_storage': persistedConsent.analytics_storage,
+'consent_ad_user_data': persistedConsent.ad_user_data,
+'consent_ad_personalization': persistedConsent.ad_personalization
+});
+// If the user has previously interacted with the banner and consent
+// is stored in the cookie, push consent_update immediately after.
+// Per Google's documentation, consent mode does not persist consent
+// choices internally, so the update command must be called on
+// subsequent pages to ensure Google tags act on granted consent.
+if (persistedConsent.consentFound) {
+window.dataLayer.push({
+'event': 'consent_update',
+'consent_ad_storage': persistedConsent.ad_storage,
+'consent_analytics_storage': persistedConsent.analytics_storage,
+'consent_ad_user_data': persistedConsent.ad_user_data,
+'consent_ad_personalization': persistedConsent.ad_personalization
+});
+}
 </script>
 <meta name="description" content="Standard Life is a retirement specialist focused entirely on retirement savings and income. We’ve been standing beside our customers for more than 200 years, helping them plan and prepare for their financial future." />
 <link rel="canonical" href="https://www.standardlifeplc.com" />
@@ -45,8 +99,6 @@ var cookieVersion = "2";
 <meta property="og:description" content="Standard Life is a retirement specialist focused entirely on retirement savings and income. We’ve been standing beside our customers for more than 200 years, helping them plan and prepare for their financial future." />
 <!-- Latest compiled and minified JavaScript -->
 <meta name="VIcurrentDateTime" content="637471808973658050" />
-<script charset="utf-8" type="text/javascript" src="/.resources/standardlife-public-lm/webresources/scripts/car.js"></script>
-<script charset="utf-8" type="text/javascript" src="/.resources/standardlife-public-lm/webresources/scripts/caro.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script charset="utf-8" type="text/javascript" src="/.resources/standardlife-public-lm/webresources/scripts/navigation.js"></script>
 <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js" integrity="sha512-nF9ZY+o4GTMKGuKfrwYSdqrbG59QLhdJgtXOPiRZ4CkswwdjyTaPn0qvbRoIsih0ZbEKfCN9dU7lhqkIQUdY/A==" crossorigin="anonymous"></script>
@@ -194,7 +246,11 @@ focusableElements = getFocusableElements();
 </script> <div class="skiplink">
 <a href="#content" class="skipnav">Skip navigation</a>
 </div>
-<header class="sl-main-header sl-main-header--sticky" itemscope itemtype="http://schema.org/WPHeader">
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2WB7BM9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJRWGVXD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<header class="sl-main-header sl-main-header--sticky" id="sl-header" itemscope itemtype="http://schema.org/WPHeader">
 <div class="share-price-wrapper" id="sharePriceWrapper">
 <div class="share-price">
 <div data-lang="en-GB" id="invd-container-ticker-345-788-Phoenix" data-path="marketdatatools/sharepriceticker/clients" data-client="345" data-config="ticker-345-788-Phoenix" data-active="true" class="invd-container Phoenix-Ticker"></div><script id="ir-script" src="https://assets.investisdigital.com/nextgentools/v3/scripts/ir.js"></script><link rel="stylesheet" href="https://assets.investisdigital.com/nextgentools/v3/assets/ngt-market-main.css"/><link rel="stylesheet" href="https://assets.investisdigital.com/native-tools/assets/Phoenix-Group/stylesheet/tmp-tools-all-in-one.css"/>
@@ -344,7 +400,7 @@ itemtype="http://schema.org/SiteNavigationElement">
 href="#"
 itemprop="url"
 aria-expanded="false"
-onclick="megaMenuClick(this.id)"
+onclick="megaMenuClick(this.id,event)"
 id="/|menuNavigation|About us|About us"
 data-target="d1c148af-c2f6-4ffc-bee8-05d6f9cf047d">About us
 </a>
@@ -515,24 +571,6 @@ Reports, results and presentations
 </div>
 <div class="darker-overlay mega-menu-dropdown-overlay" id="megamenu-overlay" hidden></div>
 <script>
-function megaMenuClick(id) {
-let megaMenuLiChildren = document.getElementById(id).closest("ul").getElementsByTagName("li");
-let megaMenuVisible = true;
-for(let i=0;i<megaMenuLiChildren.length;i++) {
-let megaMenuLiChildrenAnchor = megaMenuLiChildren[i].getElementsByTagName("a");
-for(let j=0;j<megaMenuLiChildrenAnchor.length;j++) {
-if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id != id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-} else if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id == id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-megaMenuVisible = false;
-}
-}
-}
-if(megaMenuVisible) {
-document.getElementById(id).setAttribute("aria-expanded","true");
-}
-}
 function searchedTerm() {
 dataLayerSearch(document.getElementById("key").value);
 }
@@ -549,7 +587,7 @@ $(this).parents('.mega-menu-desktop').addClass('no-megamenu-header');
 href="#"
 itemprop="url"
 aria-expanded="false"
-onclick="megaMenuClick(this.id)"
+onclick="megaMenuClick(this.id,event)"
 id="/|menuNavigation|Sustainability|Sustainability"
 data-target="0a57e624-02af-4228-8bc8-e5e022cac73c">Sustainability
 </a>
@@ -699,24 +737,6 @@ ESG data appendix (XLS)
 </div>
 <div class="darker-overlay mega-menu-dropdown-overlay" id="megamenu-overlay" hidden></div>
 <script>
-function megaMenuClick(id) {
-let megaMenuLiChildren = document.getElementById(id).closest("ul").getElementsByTagName("li");
-let megaMenuVisible = true;
-for(let i=0;i<megaMenuLiChildren.length;i++) {
-let megaMenuLiChildrenAnchor = megaMenuLiChildren[i].getElementsByTagName("a");
-for(let j=0;j<megaMenuLiChildrenAnchor.length;j++) {
-if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id != id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-} else if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id == id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-megaMenuVisible = false;
-}
-}
-}
-if(megaMenuVisible) {
-document.getElementById(id).setAttribute("aria-expanded","true");
-}
-}
 function searchedTerm() {
 dataLayerSearch(document.getElementById("key").value);
 }
@@ -733,7 +753,7 @@ $(this).parents('.mega-menu-desktop').addClass('no-megamenu-header');
 href="#"
 itemprop="url"
 aria-expanded="false"
-onclick="megaMenuClick(this.id)"
+onclick="megaMenuClick(this.id,event)"
 id="/|menuNavigation|Investors|Investors"
 data-target="02f025e3-4fea-4ce6-a2af-169dda1dcab1">Investors
 </a>
@@ -956,24 +976,6 @@ Anti-Bribery
 </div>
 <div class="darker-overlay mega-menu-dropdown-overlay" id="megamenu-overlay" hidden></div>
 <script>
-function megaMenuClick(id) {
-let megaMenuLiChildren = document.getElementById(id).closest("ul").getElementsByTagName("li");
-let megaMenuVisible = true;
-for(let i=0;i<megaMenuLiChildren.length;i++) {
-let megaMenuLiChildrenAnchor = megaMenuLiChildren[i].getElementsByTagName("a");
-for(let j=0;j<megaMenuLiChildrenAnchor.length;j++) {
-if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id != id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-} else if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id == id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-megaMenuVisible = false;
-}
-}
-}
-if(megaMenuVisible) {
-document.getElementById(id).setAttribute("aria-expanded","true");
-}
-}
 function searchedTerm() {
 dataLayerSearch(document.getElementById("key").value);
 }
@@ -990,7 +992,7 @@ $(this).parents('.mega-menu-desktop').addClass('no-megamenu-header');
 href="#"
 itemprop="url"
 aria-expanded="false"
-onclick="megaMenuClick(this.id)"
+onclick="megaMenuClick(this.id,event)"
 id="/|menuNavigation|News &amp; Views|News &amp; Views"
 data-target="968e4a93-3691-4d97-a643-8a414fdb754f">News &amp; Views
 </a>
@@ -1139,24 +1141,6 @@ Who we are
 </div>
 <div class="darker-overlay mega-menu-dropdown-overlay" id="megamenu-overlay" hidden></div>
 <script>
-function megaMenuClick(id) {
-let megaMenuLiChildren = document.getElementById(id).closest("ul").getElementsByTagName("li");
-let megaMenuVisible = true;
-for(let i=0;i<megaMenuLiChildren.length;i++) {
-let megaMenuLiChildrenAnchor = megaMenuLiChildren[i].getElementsByTagName("a");
-for(let j=0;j<megaMenuLiChildrenAnchor.length;j++) {
-if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id != id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-} else if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id == id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-megaMenuVisible = false;
-}
-}
-}
-if(megaMenuVisible) {
-document.getElementById(id).setAttribute("aria-expanded","true");
-}
-}
 function searchedTerm() {
 dataLayerSearch(document.getElementById("key").value);
 }
@@ -1173,7 +1157,7 @@ $(this).parents('.mega-menu-desktop').addClass('no-megamenu-header');
 href="#"
 itemprop="url"
 aria-expanded="false"
-onclick="megaMenuClick(this.id)"
+onclick="megaMenuClick(this.id,event)"
 id="/|menuNavigation|Careers|Careers"
 data-target="33e81401-3631-4228-94d7-a16eea02116d">Careers
 </a>
@@ -1316,24 +1300,6 @@ Search jobs
 </div>
 <div class="darker-overlay mega-menu-dropdown-overlay" id="megamenu-overlay" hidden></div>
 <script>
-function megaMenuClick(id) {
-let megaMenuLiChildren = document.getElementById(id).closest("ul").getElementsByTagName("li");
-let megaMenuVisible = true;
-for(let i=0;i<megaMenuLiChildren.length;i++) {
-let megaMenuLiChildrenAnchor = megaMenuLiChildren[i].getElementsByTagName("a");
-for(let j=0;j<megaMenuLiChildrenAnchor.length;j++) {
-if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id != id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-} else if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id == id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-megaMenuVisible = false;
-}
-}
-}
-if(megaMenuVisible) {
-document.getElementById(id).setAttribute("aria-expanded","true");
-}
-}
 function searchedTerm() {
 dataLayerSearch(document.getElementById("key").value);
 }
@@ -1350,7 +1316,7 @@ $(this).parents('.mega-menu-desktop').addClass('no-megamenu-header');
 href="#"
 itemprop="url"
 aria-expanded="false"
-onclick="megaMenuClick(this.id)"
+onclick="megaMenuClick(this.id,event)"
 id="/|menuNavigation|/|/"
 data-target="69363156-06ce-483c-896d-63909e63d1a7">
 <span class="fa fa-solid fa-magnifying-glass"></span>
@@ -1413,24 +1379,6 @@ document.getElementById("NavLabel|SearchButtonIcon|SearchSection").disabled = fa
 </div>
 <div class="darker-overlay mega-menu-dropdown-overlay" id="megamenu-overlay" hidden></div>
 <script>
-function megaMenuClick(id) {
-let megaMenuLiChildren = document.getElementById(id).closest("ul").getElementsByTagName("li");
-let megaMenuVisible = true;
-for(let i=0;i<megaMenuLiChildren.length;i++) {
-let megaMenuLiChildrenAnchor = megaMenuLiChildren[i].getElementsByTagName("a");
-for(let j=0;j<megaMenuLiChildrenAnchor.length;j++) {
-if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id != id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-} else if(megaMenuLiChildrenAnchor[j].getAttribute("aria-expanded")=="true" && megaMenuLiChildrenAnchor[j].id == id) {
-megaMenuLiChildrenAnchor[j].setAttribute("aria-expanded","false");
-megaMenuVisible = false;
-}
-}
-}
-if(megaMenuVisible) {
-document.getElementById(id).setAttribute("aria-expanded","true");
-}
-}
 function searchedTerm() {
 dataLayerSearch(document.getElementById("key").value);
 }
@@ -1469,7 +1417,7 @@ Javascript is disabled in your browser and some features on this website, like t
 <p class="sl-login-button text-white bg-primary">
 <a href="" style="display:none">Login</a>
 </p>
-<button class="sl-main-header__toggle-button" aria-expanded="false" title="Toggle Menu">
+<button class="sl-main-header__toggle-button" aria-expanded="false" title="Toggle Menu" id="sl-main-header__toggle-button">
 <span class="sl-main-header__toggle-icon">
 <span></span>
 <span></span>
@@ -1773,6 +1721,31 @@ window.addEventListener('resize',adjustBannerHeight);
 <figure class="">
 <div class="caption">
 <div class="caption-wrapper">
+<a class="blockLink" href="/news-and-views/press-releases/article-page/launch-of-a-sharia-lifestyle-strategy" title="Standard Life extends its Sharia proposition with launch of a Sharia Lifestyle Strategy" id="/|articleCard|noCategory|Standard Life extends its Sharia proposition with launch of a Sharia Lifestyle Strategy"
+></a>
+<div class="mainCaption">
+<h3 class="caption-title">Standard Life extends its Sharia proposition with launch of a Sharia Lifestyle Strategy</h3>
+<div class="caption-description">
+<span class="tileDescription">Standard Life, the retirement specialist focused entirely on retirement savings and income, has launched a fully Sharia-compliant pension option, the Standard Life Sharia Universal Strategic Lifestyle Profile. The launch further extends Standard Life’s range of responsible investment options for members of its workplace pension schemes.</span>
+<div class="subtext">May 18, 2026</div>
+</div>
+</div>
+<div class="tile-footer">
+<div class="blog__profile__status">
+</div>
+<div class="card_link_text">
+Read the press release
+<i class="btn-right_icon fa fa-solid fa-chevron-right"></i>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</li>
+<li class="entire-link-tile">
+<figure class="">
+<div class="caption">
+<div class="caption-wrapper">
 <a class="blockLink" href="/news-and-views/press-releases/article-page/retirement-income-rule-of-300" title="This is pension planning! Standard Life unveils the ‘Rule of 300’ for retirement income" id="/|articleCard|noCategory|This is pension planning! Standard Life unveils the ‘Rule of 300’ for retirement income"
 ></a>
 <div class="mainCaption">
@@ -1805,31 +1778,6 @@ Read the press release
 <div class="caption-description">
 <span class="tileDescription">New report sets out how deliberative democracy could build trust and surface public consensus on pensions reform</span>
 <div class="subtext">May 05, 2026</div>
-</div>
-</div>
-<div class="tile-footer">
-<div class="blog__profile__status">
-</div>
-<div class="card_link_text">
-Read the press release
-<i class="btn-right_icon fa fa-solid fa-chevron-right"></i>
-</div>
-</div>
-</div>
-</div>
-</figure>
-</li>
-<li class="entire-link-tile">
-<figure class="">
-<div class="caption">
-<div class="caption-wrapper">
-<a class="blockLink" href="/news-and-views/press-releases/article-page/gail-izat-appointed-chief-operating-officer" title="Gail Izat appointed Chief Operating Officer" id="/|articleCard|noCategory|Gail Izat appointed Chief Operating Officer"
-></a>
-<div class="mainCaption">
-<h3 class="caption-title">Gail Izat appointed Chief Operating Officer for Standard Life’s Pensions &amp; Savings business</h3>
-<div class="caption-description">
-<span class="tileDescription">Gail Izat has been appointed to the newly created position of Chief Operating Officer (COO) for Standard Life’s Pensions &amp; Savings business.</span>
-<div class="subtext">April 30, 2026</div>
 </div>
 </div>
 <div class="tile-footer">
@@ -2178,7 +2126,7 @@ href="https://www.x.com/standardlifeuk" rel="noopener noreferrer" target="_blank
 </div>
 <div class="main-footer-section-title">
 <div class="visited-link-section">
-<h3>Sign Up for Alerts</h3>
+<h2 class="h3-heading">Sign Up for Alerts</h2>
 <p>Keep updated by email</p>
 </div>
 <div class="flex dynamic-btns" id="dynamicbuttons">
@@ -2320,7 +2268,7 @@ $footerIcon.toggleClass('fa fa-solid fa-chevron-down fa fa-solid fa-chevron-up')
 </div>
 </div>
 </footer>
-<script src="/.resources/standardlife-public-lm/webresources/scripts/vendor.bundle.min.js"></script>
+<script src="/.resources/standardlife-public-lm/webresources/scripts/sl-common.js"></script>
 <script src="/.resources/standardlife-public-lm/webresources/scripts/standard-life.bundle.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-4.0.2.js"></script>
 <script src="/.resources/standardlife-public-lm/webresources/scripts/jquery.bemhelpers.js"></script>
@@ -2476,5 +2424,5 @@ background-image: url("/.resources/standardlife-public-lm/webresources/images/ch
 background-repeat:no-repeat;
 }
 </style>
-<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1122841844" async></script></body>
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1343501613" async></script></body>
 </html>
