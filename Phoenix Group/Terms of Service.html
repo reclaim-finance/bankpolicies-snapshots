@@ -100,7 +100,7 @@ window.dataLayer.push({
 <!-- Latest compiled and minified JavaScript -->
 <meta name="VIcurrentDateTime" content="637471808973658050" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script charset="utf-8" type="text/javascript" src="/.resources/standardlife-public-lm/webresources/scripts/navigation.js"></script>
+<script charset="utf-8" type="text/javascript" defer src="/.resources/standardlife-public-lm/webresources/scripts/sl-common.js"></script>
 <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js" integrity="sha512-nF9ZY+o4GTMKGuKfrwYSdqrbG59QLhdJgtXOPiRZ4CkswwdjyTaPn0qvbRoIsih0ZbEKfCN9dU7lhqkIQUdY/A==" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css" integrity="sha512-k0u6mixrDpfcaeu7sUpo4OcH8rfxzgXtiqauVEbd6CXNo6Sa0SuVkxbWvT7SiPKvNpfovncDTNvm3yX1I+xiNQ==" crossorigin="anonymous">
 <script type="application/ld+json">
@@ -263,14 +263,14 @@ Javascript is disabled in your browser and some features on this website, like t
 </p>
 </div>
 </noscript>
-<nav class="utility-navigation bg-darkBlue height64">
+<nav class="utility-navigation bg-darkBlue height64" aria-label="Service Navigation">
 <div class="container height64">
 <ul class="utility-channels utility-navList sharePriceDesktop">
 </ul>
 <ul class="utility-links utility-navList" aria-label="menu">
 
 <li class=" ">
-    <a  class="dropdown-nav-link-text text-decoration-none" aria-label="UK Standard Life customer login" 
+    <a  class="dropdown-nav-link-text text-decoration-none" aria-label="Standard Life UK customer login" 
         class=""
         href="https://online.standardlife.com/secure/customer-authentication-client/customer/login" 
         rel="noopener noreferrer"
@@ -292,7 +292,7 @@ Javascript is disabled in your browser and some features on this website, like t
 <a class="dropdownCards text-decoration-none" href="/about " target="_self" rel="noopener noreferrer" target="_self" id="/|dropdownMenu|Standard Life|Standard Life"
 >
 <div class="brand-logo">
-<img src="/dam/jcr:3b7bc7dc-50a3-4972-aa91-0f9b972454dc/Standard%20Life%20Logo%20Default.svg" alt="image">
+<img src="https://library.standardlife.co.uk/STL_Main_Identity_RGB_300dpi.png" alt="image">
 </div>
 <div class="brand-card-content">
 <div class="brand-card-title">
@@ -352,7 +352,7 @@ ReAssure </div>
 <a class="dropdownCards text-decoration-none" href="/about/brands/phoenix-wealth " target="_self" rel="noopener noreferrer" target="_self" id="/|dropdownMenu|Phoenix Wealth|Phoenix Wealth"
 >
 <div class="brand-logo">
-<img src="/dam/jcr:f56980ab-ceeb-439d-ad41-832206bdb038/phoenixwealth-logo.png" alt="image">
+<img src="https://library.standardlife.co.uk/phoenixwealth-logo.png" alt="image">
 </div>
 <div class="brand-card-content">
 <div class="brand-card-title">
@@ -364,16 +364,16 @@ Phoenix Wealth </div>
 </a>
 </div>
 <div class="brand-card mega-menu-column mega-menu-header four-column">
-<a class="dropdownCards text-decoration-none" href="/about/brands/phoenix-cis " target="_self" rel="noopener noreferrer" target="_self" id="/|dropdownMenu|Phoenix Corporate Investment Services|Phoenix Corporate Investment Services"
+<a class="dropdownCards text-decoration-none" href="/about/brands/standard-life-cis " target="_self" rel="noopener noreferrer" target="_self" id="/|dropdownMenu|Standard Life Corporate Investment Solutions|Standard Life Corporate Investment Solutions"
 >
 <div class="brand-logo">
-<img src="https://library.standardlife.co.uk/PhoenixCIS_Logo_RGB_Web.png" alt="image">
+<img src="https://library.standardlife.co.uk/STL_Main_Identity_RGB_300dpi.png" alt="image">
 </div>
 <div class="brand-card-content">
 <div class="brand-card-title">
-Phoenix Corporate Investment Services </div>
+Standard Life Corporate Investment Solutions </div>
 <div class="brand-card-description">
-<p>Phoenix Corporate Investment Services delivers bespoke investment-only solutions for workplace pension schemes and Master Trusts.</p>
+<p>Standard Life Corporate Investment Solutions (CIS) delivers bespoke investment-only solutions for workplace pension schemes, master trusts and other institutional clients.</p>
 </div>
 </div>
 </a>
@@ -392,7 +392,7 @@ Phoenix Corporate Investment Services </div>
 <img id="headerImage" src="/dam/jcr:3b7bc7dc-50a3-4972-aa91-0f9b972454dc/Standard%20Life%20Logo%20Default.svg" alt="Standard Life logo" itemprop="logo" />
 </a>
 </div>
-<nav class="sl-main-header__menus">
+<nav class="sl-main-header__menus" aria-label="Main Navigation">
 <ul class="sl-main-header__navigation" aria-label="Main navigation" role="menu" itemscope
 itemtype="http://schema.org/SiteNavigationElement">
 <li role="menuitem">
@@ -401,6 +401,7 @@ href="#"
 itemprop="url"
 aria-expanded="false"
 onclick="megaMenuClick(this.id,event)"
+aria-label=""
 id="/|menuNavigation|About us|About us"
 data-target="d1c148af-c2f6-4ffc-bee8-05d6f9cf047d">About us
 </a>
@@ -414,12 +415,12 @@ data-target="d1c148af-c2f6-4ffc-bee8-05d6f9cf047d">About us
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/about" target="_self" class="space-mb0">About us</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/about" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">About us</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|Ourvalues"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/our-values" target="_self">
 Our values
 </a>
@@ -427,7 +428,7 @@ Our values
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|Ourhistory"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/our-history" target="_self">
 Our history
 </a>
@@ -435,7 +436,7 @@ Our history
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|Ourgroupbrandstrategy"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/our-group-brand-strategy" target="_self">
 Our group brand strategy
 </a>
@@ -443,7 +444,7 @@ Our group brand strategy
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|Ourlocations"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/our-locations" target="_self">
 Our locations
 </a>
@@ -455,12 +456,12 @@ Our locations
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/about/our-team" target="_self" class="space-mb0">Our team</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/about/our-team" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Our team</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|Leadership"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/our-team/leadership" target="_self">
 Leadership
 </a>
@@ -468,7 +469,7 @@ Leadership
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|Communityengagement"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/our-team/community-engagement" target="_self">
 Community engagement
 </a>
@@ -480,12 +481,12 @@ Community engagement
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/about/brands" target="_self" class="space-mb0">Our brands</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/about/brands" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Our brands</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|StandardLife"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/brands/standard-life-brand" target="_self">
 Standard Life
 </a>
@@ -493,7 +494,7 @@ Standard Life
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|SunLife"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/brands/sun-life-brand" target="_self">
 SunLife
 </a>
@@ -501,33 +502,33 @@ SunLife
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|PhoenixLife"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/brands/phoenix-life-brand" target="_self">
 Phoenix Life
 </a>
 </li>
 <li>
 <a
-id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|PhoenixCIS"
-onclick="closeDesktopMegamenu()" class=""
-href="/about/brands/phoenix-cis" target="_self">
-Phoenix CIS
+id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|ReAssure"
+onclick="return closeDesktopMegamenu(this, event)" class=""
+href="/about/brands/reassure" target="_self">
+ReAssure
 </a>
 </li>
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|PhoenixWealth"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/brands/phoenix-wealth" target="_self">
 Phoenix Wealth
 </a>
 </li>
 <li>
 <a
-id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|ReAssure"
-onclick="closeDesktopMegamenu()" class=""
-href="/about/brands/reassure" target="_self">
-ReAssure
+id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|StandardLifeCIS"
+onclick="return closeDesktopMegamenu(this, event)" class=""
+href="/about/brands/standard-life-cis" target="_self">
+Standard Life CIS
 </a>
 </li>
 </ul>
@@ -539,12 +540,12 @@ ReAssure
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/about/brands/our-companies" target="_self" class="space-mb0">Company reporting</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/about/brands/our-companies" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Company reporting</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|TCFDreporting"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/brands/tcfd-reporting" target="_self">
 TCFD reporting
 </a>
@@ -552,7 +553,7 @@ TCFD reporting
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksabout-us|Reports,resultsandpresentations"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/results-reports-presentations" target="_self">
 Reports, results and presentations
 </a>
@@ -588,6 +589,7 @@ href="#"
 itemprop="url"
 aria-expanded="false"
 onclick="megaMenuClick(this.id,event)"
+aria-label=""
 id="/|menuNavigation|Sustainability|Sustainability"
 data-target="0a57e624-02af-4228-8bc8-e5e022cac73c">Sustainability
 </a>
@@ -601,12 +603,12 @@ data-target="0a57e624-02af-4228-8bc8-e5e022cac73c">Sustainability
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/sustainability" target="_self" class="space-mb0">Sustainability</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/sustainability" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Sustainability</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkssustainability|People:Betterjourneys"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/sustainability/people-better-journeys" target="_self">
 People: Better journeys
 </a>
@@ -614,7 +616,7 @@ People: Better journeys
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkssustainability|Planet:Betterfutures"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/sustainability/planet-better-futures" target="_self">
 Planet: Better futures
 </a>
@@ -622,7 +624,7 @@ Planet: Better futures
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkssustainability|Ourjourneytonetzero"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/sustainability/net-zero-journey" target="_self">
 Our journey to net zero
 </a>
@@ -630,7 +632,7 @@ Our journey to net zero
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkssustainability|Responsibleinvestment"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/sustainability/responsible-investments" target="_self">
 Responsible investment
 </a>
@@ -642,12 +644,12 @@ Responsible investment
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/sustainability/embedding-responsibility" target="_self" class="space-mb0">Embed responsibility</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/sustainability/embedding-responsibility" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Embed responsibility</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkssustainability|Ouroperationsandsuppliers"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/sustainability/operations-and-suppliers" target="_self">
 Our operations and suppliers
 </a>
@@ -655,7 +657,7 @@ Our operations and suppliers
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkssustainability|Governance"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/sustainability/governance" target="_self">
 Governance
 </a>
@@ -663,7 +665,7 @@ Governance
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkssustainability|Reports,policiesandmemberships"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/sustainability/reports-policy-membership" target="_self">
 Reports, policies and memberships
 </a>
@@ -671,7 +673,7 @@ Reports, policies and memberships
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkssustainability|Membershipsandaccreditations"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/sustainability/memberships-accreditations" target="_self">
 Memberships and accreditations
 </a>
@@ -683,12 +685,12 @@ Memberships and accreditations
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/sustainability/reports-policy-membership" target="_self" class="space-mb0">Reports</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/sustainability/reports-policy-membership" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Reports</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinks|SustainabilityReport(PDF)"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://library.standardlife.co.uk/sustainability-report-2025.pdf" rel="noopener noreferrer" target="_blank" >
 Sustainability Report (PDF)
 </a>
@@ -696,7 +698,7 @@ Sustainability Report (PDF)
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinks|NetZeroTransitionPlan(PDF)"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://library.standardlife.co.uk/net-zero-transition-plan.pdf" rel="noopener noreferrer" target="_blank" >
 Net Zero Transition Plan (PDF)
 </a>
@@ -704,7 +706,7 @@ Net Zero Transition Plan (PDF)
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinks|Annualreport2025(PDF)"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://library.standardlife.co.uk/annual-report-and-accounts-2025-spread.pdf" rel="noopener noreferrer" target="_blank" >
 Annual report 2025 (PDF)
 </a>
@@ -712,7 +714,7 @@ Annual report 2025 (PDF)
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinks|StewardshipReport(PDF)"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://library.standardlife.co.uk/stewardship-report.pdf" rel="noopener noreferrer" target="_blank" >
 Stewardship Report (PDF)
 </a>
@@ -720,7 +722,7 @@ Stewardship Report (PDF)
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinks|ESGdataappendix(XLS)"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://library.standardlife.co.uk/esg-data-appendix-2025.xlsx" rel="noopener noreferrer" target="_blank" >
 ESG data appendix (XLS)
 </a>
@@ -754,6 +756,7 @@ href="#"
 itemprop="url"
 aria-expanded="false"
 onclick="megaMenuClick(this.id,event)"
+aria-label=""
 id="/|menuNavigation|Investors|Investors"
 data-target="02f025e3-4fea-4ce6-a2af-169dda1dcab1">Investors
 </a>
@@ -767,12 +770,12 @@ data-target="02f025e3-4fea-4ce6-a2af-169dda1dcab1">Investors
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/investors" target="_self" class="space-mb0">Investors</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/investors" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Investors</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Ourinvestmentcase"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/our-investment-case" target="_self">
 Our investment case
 </a>
@@ -780,7 +783,7 @@ Our investment case
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Financialcalendar"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/financial-calendar" target="_self">
 Financial calendar
 </a>
@@ -788,7 +791,7 @@ Financial calendar
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Announcements"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/announcements" target="_self">
 Announcements
 </a>
@@ -796,7 +799,7 @@ Announcements
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Equityanalysts"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/equity-analysts" target="_self">
 Equity analysts
 </a>
@@ -804,7 +807,7 @@ Equity analysts
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Debtholdings&amp;creditratings"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/debt-holdings-credit-ratings" target="_self">
 Debt holdings &amp; credit ratings
 </a>
@@ -812,7 +815,7 @@ Debt holdings &amp; credit ratings
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|InvestorRelationscontacts"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/investor-relations-contacts" target="_self">
 Investor Relations contacts
 </a>
@@ -824,12 +827,12 @@ Investor Relations contacts
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/investors/results-reports-presentations" target="_self" class="space-mb0">Reports</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/investors/results-reports-presentations" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Reports</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Annualreport2025"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/annual-report-2025" target="_self">
 Annual report 2025
 </a>
@@ -837,7 +840,7 @@ Annual report 2025
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Results,reportsandpresentations"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/results-reports-presentations" target="_self">
 Results, reports and presentations
 </a>
@@ -845,7 +848,7 @@ Results, reports and presentations
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Archive"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/archive" target="_self">
 Archive
 </a>
@@ -862,7 +865,7 @@ Archive
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Sharemonitor"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/shareholders/share-monitor" target="_self">
 Share monitor
 </a>
@@ -870,7 +873,7 @@ Share monitor
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Sharepricetable"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/shareholders/share-price-table" target="_self">
 Share price table
 </a>
@@ -878,7 +881,7 @@ Share price table
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Sharepricecalculator"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/shareholders/share-price-calculator" target="_self">
 Share price calculator
 </a>
@@ -886,7 +889,7 @@ Share price calculator
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Dividends"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/shareholders/dividends" target="_self">
 Dividends
 </a>
@@ -894,7 +897,7 @@ Dividends
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Totalreturncalculator"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/shareholders/total-return-calculator" target="_self">
 Total return calculator
 </a>
@@ -902,7 +905,7 @@ Total return calculator
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Majorshareholders"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/shareholders/major-shareholders" target="_self">
 Major shareholders
 </a>
@@ -910,7 +913,7 @@ Major shareholders
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Shareholdermeetings"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/shareholders/shareholder-meetings" target="_self">
 Shareholder meetings
 </a>
@@ -922,12 +925,12 @@ Shareholder meetings
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/investors/governance" target="_self" class="space-mb0">Governance</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/investors/governance" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Governance</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Leadership"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/our-team/leadership" target="_self">
 Leadership
 </a>
@@ -935,7 +938,7 @@ Leadership
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|BoardCommittees"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/governance/board-committees" target="_self">
 Board Committees
 </a>
@@ -943,7 +946,7 @@ Board Committees
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|CorporateGovernanceReport"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/governance/corporate-governance-report" target="_self">
 Corporate Governance Report
 </a>
@@ -951,7 +954,7 @@ Corporate Governance Report
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|TaxStrategy"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/governance/tax-strategy" target="_self">
 Tax Strategy
 </a>
@@ -959,7 +962,7 @@ Tax Strategy
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksinvestors|Anti-Bribery"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/investors/governance/anti-bribery" target="_self">
 Anti-Bribery
 </a>
@@ -993,6 +996,7 @@ href="#"
 itemprop="url"
 aria-expanded="false"
 onclick="megaMenuClick(this.id,event)"
+aria-label=""
 id="/|menuNavigation|News &amp; Views|News &amp; Views"
 data-target="968e4a93-3691-4d97-a643-8a414fdb754f">News &amp; Views
 </a>
@@ -1006,12 +1010,12 @@ data-target="968e4a93-3691-4d97-a643-8a414fdb754f">News &amp; Views
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/news-and-views" target="_self" class="space-mb0">News &amp; views</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/news-and-views" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">News &amp; views</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|Latestinsightarticles"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/news-and-views/articles" target="_self">
 Latest insight articles
 </a>
@@ -1019,7 +1023,7 @@ Latest insight articles
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|Unlockinginvestmentinclimatesolutions"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/news-and-views/unlocking-investment-in-climate-solutions" target="_self">
 Unlocking investment in climate solutions
 </a>
@@ -1027,7 +1031,7 @@ Unlocking investment in climate solutions
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|Rethinkingtheroadtoretirement"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/news-and-views/rethinking-the-road-to-retirement" target="_self">
 Rethinking the road to retirement
 </a>
@@ -1035,7 +1039,7 @@ Rethinking the road to retirement
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|PowerofAttorney"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/news-and-views/power-of-attorney" target="_self">
 Power of Attorney
 </a>
@@ -1047,12 +1051,12 @@ Power of Attorney
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/news-and-views/press-releases" target="_self" class="space-mb0">Press releases</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/news-and-views/press-releases" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Press releases</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|Mediateam"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/news-and-views/media-team" target="_self">
 Media team
 </a>
@@ -1060,7 +1064,7 @@ Media team
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|Mediaresources"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/news-and-views/media-resources" target="_self">
 Media resources
 </a>
@@ -1068,7 +1072,7 @@ Media resources
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|Publicaffairs"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/news-and-views/public-affairs" target="_self">
 Public affairs
 </a>
@@ -1080,12 +1084,12 @@ Public affairs
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="https://www.standardlife.co.uk/centre-for-the-future-of-retirement/" target="_self" class="space-mb0">Standard Life Centre</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="https://www.standardlife.co.uk/centre-for-the-future-of-retirement/" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Standard Life Centre</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|Ourwork"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://www.standardlife.co.uk/centre-for-the-future-of-retirement/our-work" target="_self">
 Our work
 </a>
@@ -1093,7 +1097,7 @@ Our work
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|Articles"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://www.standardlife.co.uk/centre-for-the-future-of-retirement/articles" target="_self">
 Articles
 </a>
@@ -1101,7 +1105,7 @@ Articles
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|Reports"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://www.standardlife.co.uk/centre-for-the-future-of-retirement/research-reports" target="_self">
 Reports
 </a>
@@ -1109,7 +1113,7 @@ Reports
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinksnews-and-views|Whoweare"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://www.standardlife.co.uk/centre-for-the-future-of-retirement/who-we-are" target="_self">
 Who we are
 </a>
@@ -1150,6 +1154,7 @@ href="#"
 itemprop="url"
 aria-expanded="false"
 onclick="megaMenuClick(this.id,event)"
+aria-label=""
 id="/|menuNavigation|Careers|Careers"
 data-target="33e81401-3631-4228-94d7-a16eea02116d">Careers
 </a>
@@ -1163,12 +1168,12 @@ data-target="33e81401-3631-4228-94d7-a16eea02116d">Careers
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/careers" target="_self" class="space-mb0">Careers at Standard Life</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/careers" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Careers at Standard Life</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|WhyStandardLife?"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/careers/why-standard-life" target="_self">
 Why Standard Life?
 </a>
@@ -1176,7 +1181,7 @@ Why Standard Life?
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Rewardsandbenefits"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/careers/rewards-benefits" target="_self">
 Rewards and benefits
 </a>
@@ -1184,7 +1189,7 @@ Rewards and benefits
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Learning&amp;development"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/careers/learning-development" target="_self">
 Learning &amp; development
 </a>
@@ -1192,7 +1197,7 @@ Learning &amp; development
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Flexibleworking"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/careers/flexible-working" target="_self">
 Flexible working
 </a>
@@ -1200,7 +1205,7 @@ Flexible working
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Wellbeing"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/careers/wellbeing" target="_self">
 Wellbeing
 </a>
@@ -1208,7 +1213,7 @@ Wellbeing
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Diversity,Equity&amp;Inclusion"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/careers/dei" target="_self">
 Diversity, Equity &amp; Inclusion
 </a>
@@ -1216,7 +1221,7 @@ Diversity, Equity &amp; Inclusion
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Fraudulentjobpostings"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/careers/fraudulent-job-postings" target="_self">
 Fraudulent job postings
 </a>
@@ -1228,12 +1233,12 @@ Fraudulent job postings
 <section class="mega-menu-section">
 <div class="mega-menu-content">
 <div class="menu-links">
-<h4 class="menu-title"><a href="/careers/find-your-role" target="_self" class="space-mb0">Find your role</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
+<h4 class="menu-title"><a href="/careers/find-your-role" target="_self" class="space-mb0" onclick="return closeDesktopMegamenu(this, event)">Find your role</a> <i class="fa fa-solid fa-chevron-right" aria-hidden="true"></i></h4>
 <ul class="col-2sublinks">
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Howwehire"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/careers/how-we-hire" target="_self">
 How we hire
 </a>
@@ -1241,7 +1246,7 @@ How we hire
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Talktous"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://standard-life.careerpages.rec-marketing.dc3.pageuppeople.com/" rel="noopener noreferrer" target="_blank" >
 Talk to us
 </a>
@@ -1249,7 +1254,7 @@ Talk to us
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Ourlocations"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/about/our-locations" target="_self">
 Our locations
 </a>
@@ -1257,7 +1262,7 @@ Our locations
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|ActuarialTraineeScheme"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/careers/actuarial-trainee-scheme" target="_self">
 Actuarial Trainee Scheme
 </a>
@@ -1265,7 +1270,7 @@ Actuarial Trainee Scheme
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Leadershipprogrammes"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="/careers/leadership-programmes" target="_self">
 Leadership programmes
 </a>
@@ -1273,7 +1278,7 @@ Leadership programmes
 <li>
 <a
 id="MegaNavigation|Dropdowncolumn2Sublinkscareers|Searchjobs"
-onclick="closeDesktopMegamenu()" class=""
+onclick="return closeDesktopMegamenu(this, event)" class=""
 href="https://fa-enor-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/jobs" rel="noopener noreferrer" target="_blank" >
 Search jobs
 </a>
@@ -1309,6 +1314,7 @@ href="#"
 itemprop="url"
 aria-expanded="false"
 onclick="megaMenuClick(this.id,event)"
+aria-label=""
 id="/|menuNavigation|/|/"
 data-target="69363156-06ce-483c-896d-63909e63d1a7">
 <span class="fa fa-solid fa-magnifying-glass"></span>
@@ -1396,7 +1402,7 @@ Javascript is disabled in your browser and some features on this website, like t
 </p>
 </div>
 </noscript>
-<nav class="utility-navigation bg-darkBlue height64">
+<nav class="utility-navigation bg-darkBlue height64" aria-label="Service Navigation">
 <ul class="utility-channels utility-navList height64 sharePriceMobile">
 </ul>
 </nav>
@@ -1641,7 +1647,7 @@ window.addEventListener('resize',adjustBannerHeight);
 
 
 
-<section class="bg-paleBlue space-pt20x2 space-pb20x2 none" >
+<section class="bg-paleBlue  none" >
  
 
 
@@ -1658,7 +1664,7 @@ window.addEventListener('resize',adjustBannerHeight);
 
     <section class="banner-section page-banner-section has-bg-image has-overlay overlay-aquaToTrans-grad_1  boxedImagePageBanner imgleft page-banner-dark-text" alt="" >
         <div class="bg-image-container loaded hide-margin-padding" aria-label='Company logos for Standard Life, Sun Life, Reassure, Phoenix Life, Phoenix Wealth and Phoenix Corporate Investment Services' role='img' >
-            <img src="https://library.standardlife.co.uk/Brand_logos_x2.png" alt="" >
+            <img src="https://library.standardlife.co.uk/Brand_logos_5_a.png" alt="" >
         </div>
         <div class="justify-right grid-box">
             <div class="banner-section__inner align-left text-left stack-order-inFront grid-colspan-6 hide-margin-padding">
@@ -1713,13 +1719,13 @@ window.addEventListener('resize',adjustBannerHeight);
 <figure class="">
 <div class="caption">
 <div class="caption-wrapper">
-<a class="blockLink" href="/news-and-views/press-releases/article-page/dont-ignore-your-p60-document" title="Don’t ignore your P60 document as Self-Assessment season approaches" id="/|articleCard|noCategory|Don’t ignore your P60 document as Self-Assessment season approaches"
+<a class="blockLink" href="/news-and-views/press-releases/article-page/sl-rebrands-institutional-investment-platform-to-align-with-corporate-brand" title="Standard Life rebrands institutional investment platform to align with corporate brand" id="/|articleCard|noCategory|Standard Life rebrands institutional investment platform to align with corporate brand"
 ></a>
 <div class="mainCaption">
-<h3 class="caption-title">Don’t ignore your P60 document as Self-Assessment season approaches</h3>
+<h3 class="caption-title">Standard Life rebrands institutional investment platform to align with corporate brand</h3>
 <div class="caption-description">
-<span class="tileDescription">With the deadline for employers to provide employees with their P60 form having now passed, Standard Life is encouraging workers to get organised ahead of the Self-Assessment deadlines later this tax year.</span>
-<div class="subtext">June 02, 2026</div>
+<span class="tileDescription">Introducing Standard Life Corporate Investment Solutions (CIS), the new name for Standard Life’s institutional investment platform, formerly Phoenix Corporate Investment Services.</span>
+<div class="subtext">June 08, 2026</div>
 </div>
 </div>
 <div class="tile-footer">
@@ -1738,13 +1744,13 @@ Read the press release
 <figure class="">
 <div class="caption">
 <div class="caption-wrapper">
-<a class="blockLink" href="/news-and-views/press-releases/article-page/what-i-wish-i-had-known" title="What I wish I’d known" id="/|articleCard|noCategory|What I wish I’d known"
+<a class="blockLink" href="/news-and-views/press-releases/article-page/sl-welcomes-first-master-trust-board-apprentice" title="Standard Life welcomes trustee apprentice to Master Trust Board" id="/|articleCard|noCategory|Standard Life welcomes trustee apprentice to Master Trust Board"
 ></a>
 <div class="mainCaption">
-<h3 class="caption-title">What I wish I’d known: retirees say modern retirement lasts longer, costs more and is harder to navigate than expected</h3>
+<h3 class="caption-title">Standard Life welcomes trustee apprentice to Master Trust Board</h3>
 <div class="caption-description">
-<span class="tileDescription">Nearly a third (31%) of retirees say their standard of living is worse now than before they retired, compared with just one in five (20%) who say it is better.</span>
-<div class="subtext">May 27, 2026</div>
+<span class="tileDescription">Standard Life has appointed Priya Kainth, Director, Global Markets Credit, Bank of America as its first Master Trust Board apprentice, following the successful conclusion of its two-year Trustee Accelerator Programme pilot.</span>
+<div class="subtext">June 04, 2026</div>
 </div>
 </div>
 <div class="tile-footer">
@@ -1763,13 +1769,13 @@ Read the press release
 <figure class="">
 <div class="caption">
 <div class="caption-wrapper">
-<a class="blockLink" href="/news-and-views/press-releases/article-page/buy-in-with-abbey-life" title="£200m buy-in with Abbey Life" id="/|articleCard|noCategory|£200m buy-in with Abbey Life"
+<a class="blockLink" href="/news-and-views/press-releases/article-page/annuity-understanding-rise" title="Annuity understanding jumps 18% year-on-year among over-50s" id="/|articleCard|noCategory|Annuity understanding jumps 18% year-on-year among over-50s"
 ></a>
 <div class="mainCaption">
-<h3 class="caption-title">£200m buy-in with Abbey Life</h3>
+<h3 class="caption-title">Annuity understanding jumps 18% year-on-year among over-50s</h3>
 <div class="caption-description">
-<span class="tileDescription">Standard Life completes £200m buy in with Abbey Life Assurance Company Limited Staff Pension Scheme</span>
-<div class="subtext">May 20, 2026</div>
+<span class="tileDescription">Understanding of annuities among over 50s has risen sharply, with two-thirds (67%) now correctly identifying that annuities provide a guaranteed income for life, an 18% rise compared with 2024 (49%).</span>
+<div class="subtext">June 04, 2026</div>
 </div>
 </div>
 <div class="tile-footer">
@@ -2260,9 +2266,8 @@ $footerIcon.toggleClass('fa fa-solid fa-chevron-down fa fa-solid fa-chevron-up')
 </div>
 </div>
 </footer>
-<script src="/.resources/standardlife-public-lm/webresources/scripts/sl-common.js"></script>
 <script src="/.resources/standardlife-public-lm/webresources/scripts/standard-life.bundle.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-4.0.2.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-4.0.2.js" integrity="sha512-516nx2VqDM/bw5GTVG5cqcw39dZg60F+YxqaHNCKnWSPLeeeL8qfWCcVmd7xftXia82fA7UqmDl+RlysDnhmxA==" crossorigin="anonymous"></script>
 <script src="/.resources/standardlife-public-lm/webresources/scripts/jquery.bemhelpers.js"></script>
 <script src="/.resources/standardlife-public-lm/webresources/scripts/googleAnalytics.js"></script>
 <script src="/.resources/standardlife-public-lm/webresources/scripts/templatepages_v2.js"></script>
@@ -2416,5 +2421,5 @@ background-image: url("/.resources/standardlife-public-lm/webresources/images/ch
 background-repeat:no-repeat;
 }
 </style>
-<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=478759178" async></script></body>
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=810084321" async></script></body>
 </html>
