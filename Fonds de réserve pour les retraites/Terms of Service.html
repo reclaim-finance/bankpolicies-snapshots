@@ -680,8 +680,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <div class="block order-last xl:order-0 w-full text-deep-navy font-inter print:hidden">
                 <div class="order-last xl:order-0 xl:sticky top-30 space-y-6 xl:max-h-[calc(100vh-8rem)] xl:overflow-y-auto">
                     
-    <div class="hidden xl:block">
-        <span class="font-inter text-lg font-semibold leading-6 px-6">Sommaire</span>
+    <details class="group hidden xl:block">
+        <summary class="cursor-pointer flex items-center justify-between px-6">
+            <span class="font-inter text-lg font-semibold leading-6">Sommaire</span>
+            <img
+                class="w-6 h-6 shrink-0 transform transition-transform duration-300 group-open:rotate-180"
+                src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/chevron-down.svg"
+                alt="Chevron" />
+        </summary>
         <div class="flex flex-col p-6">
                                                 <!-- Link to other sibling pages -->
                     <a
@@ -713,23 +719,23 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         Exercice des droits de vote et politique d&#039;engagement                    </a>
                                 <div class="bg-deep-navy/20 h-px w-full last-of-type:hidden"></div>
                     </div>
-    </div>
+    </details>
                     
 <div class="flex flex-col p-6 rounded-2xl bg-pale-gold xl:mt-6">
     <div class="flex flex-row justify-between mb-7">
         <span class="font-inter font-semibold text-lg leading-6">Documents</span>
         <img class="w-full h-full min-h-6 min-w-6 max-w-6 max-h-6" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/img/general/file.svg" alt="En savoir plus">
     </div>
-                            <a href="https://www.fondsdereserve.fr/wp-content/uploads/2025/09/FRR-RapportDurabilite24-EP5-page.pdf" target="_blank" rel="noopener" title="Ouvrir le PDF" class="py-3 !no-underline">
+                            <a href="https://www.fondsdereserve.fr/wp-content/uploads/2026/06/Politique-dExclusions-du-FRR.pdf" target="_blank" rel="noopener" title="Ouvrir le PDF" class="py-3 !no-underline">
+            <span class="font-inter text-sm font-medium leading-5 opacity-70 hover:opacity-100 transition-all">Politique d’Exclusions du FRR</span>
+        </a>
+                                <div class="h-px w-full bg-deep-navy/20"></div>
+                <a href="https://www.fondsdereserve.fr/wp-content/uploads/2025/09/FRR-RapportDurabilite24-EP5-page.pdf" target="_blank" rel="noopener" title="Ouvrir le PDF" class="py-3 !no-underline">
             <span class="font-inter text-sm font-medium leading-5 opacity-70 hover:opacity-100 transition-all">Rapport durabilité 2024</span>
         </a>
                                 <div class="h-px w-full bg-deep-navy/20"></div>
                 <a href="https://www.fondsdereserve.fr/wp-content/uploads/2025/09/FRR-Lignes-directrices-relatives-a-l-exercice-des-droits-de-vote.pdf" target="_blank" rel="noopener" title="Ouvrir le PDF" class="py-3 !no-underline">
             <span class="font-inter text-sm font-medium leading-5 opacity-70 hover:opacity-100 transition-all">Lignes directrices exercice des droits de vote</span>
-        </a>
-                                <div class="h-px w-full bg-deep-navy/20"></div>
-                <a href="https://www.fondsdereserve.fr/wp-content/uploads/2026/06/Politique-dExclusions-du-FRR.pdf" target="_blank" rel="noopener" title="Ouvrir le PDF" class="py-3 !no-underline">
-            <span class="font-inter text-sm font-medium leading-5 opacity-70 hover:opacity-100 transition-all">Politique d’Exclusions du FRR</span>
         </a>
     </div>                                                        </div>
             </div>
@@ -834,7 +840,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                     </ul>
     
             <p class="font-inter text-sm opacity-50 italic">
-            Dernière mise à jour : 15/06/2026        </p>
+            Dernière mise à jour : 17/06/2026        </p>
     </div>
 
 <div class="space-y-4" >
@@ -845,7 +851,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Les instruments financiers émis par des sociétés productrices de tabac sont exclus du portefeuille d’investissement du FRR.</p>
 <p><strong>3. Positions et Politique d’exclusions relatives aux Energies Fossiles</strong></p>
 <p>Le FRR applique une politique de sortie du charbon thermique, une sortie progressive des hydrocarbures non conventionnels et une politique d’encadrement du pétrole et du gaz conventionnels.</p>
-<p>La politique d’exclusions climat du FRR peut être retrouvée sur <a href="https://www.fondsdereserve.fr/strategie-investissement-responsable/politique-climatique-du-frr/">la page de la Politique Climatique du FRR</a></p>
 <p><strong>4. Autres exclusions</strong></p>
 <p>Le FRR peut également, et de manière exceptionnelle, procéder à l’exclusion d’autres sociétés pour des atteintes graves, avérées et répétées aux normes globales auxquelles la stratégie d’investissement responsable du FRR (telle qu&rsquo;elle est publiée et actualisée sur le site Internet du FRR) fait référence.</p>
         </div>
@@ -1285,12 +1290,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </script>
 <script type="module" src="https://www.fondsdereserve.fr/wp-content/themes/frr/dist/assets/app-Dkvwh0GQ.js?ver=0.1.0"></script><script id="slick-carousel-js" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script id="filter-publications-js-extra">
-var ajax_object = {"ajax_url":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","ajaxurl":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","nonce":"265a6cbd14","lang":"fr"};
+var ajax_object = {"ajax_url":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","ajaxurl":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","nonce":"8b5ce7ccfd","lang":"fr"};
 //# sourceURL=filter-publications-js-extra
 </script>
 <script id="filter-publications-js" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/js/filter-publications.js"></script>
 <script id="publication-simple-filter-js-extra">
-var ajax_strategie_object = {"ajax_url":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","ajaxurl":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","nonce":"5479e428d9","lang":"fr"};
+var ajax_strategie_object = {"ajax_url":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","ajaxurl":"https://www.fondsdereserve.fr/wp-admin/admin-ajax.php","nonce":"bbeece32e4","lang":"fr"};
 //# sourceURL=publication-simple-filter-js-extra
 </script>
 <script id="publication-simple-filter-js" src="https://www.fondsdereserve.fr/wp-content/themes/frr/resources/js/PublicationSimpleFilter.js"></script>
